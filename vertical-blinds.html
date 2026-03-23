@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vertical Blinds – Starlight Shades</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { accent: '#FBC4A1', 'accent-dark': '#FF9B60', dark: '#3B3D40' },
+          fontFamily: { poppins: ['Poppins', 'sans-serif'] },
+          maxWidth: { site: '980px' }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Poppins', sans-serif; color: #3B3D40; }
+    .dropdown-menu { display: none; position: absolute; }
+    .pop-hover { transition: transform 0.3s ease; }
+    .pop-hover:hover { transform: scale(1.05); }
+  </style>
+</head>
+<body class="bg-white">
+
+  <!-- Navigation -->
+  <nav class="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
+    <div class="max-w-site mx-auto px-4 flex items-center justify-between h-16">
+      <a href="home.html" style="display:block;width:150px;height:44px;overflow:hidden;flex-shrink:0;"><img src="../../../starlight logo website updated.png" alt="Starlight" style="height:120px;width:auto;max-width:none;margin-top:-40px;margin-left:-54px;"></a>
+      <div class="hidden lg:flex items-center gap-5 text-sm font-normal text-dark">
+        <a href="home.html" class="hover:text-accent-dark transition-colors">Home</a>
+        <a href="about.html" class="hover:text-accent-dark transition-colors">About</a>
+        <div class="relative nav-dropdown">
+          <button class="text-accent-dark font-semibold flex items-center gap-1">Indoor Blinds <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></button>
+          <div class="dropdown-menu absolute top-full left-0 bg-white shadow-lg rounded mt-1 py-1 w-40 z-50">
+            <a href="roller-blinds.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Roller Blinds</a>
+            <a href="vertical-blinds.html" class="block px-4 py-2 text-xs bg-orange-50 text-accent-dark font-semibold">Vertical Blinds</a>
+          </div>
+        </div>
+        <div class="relative nav-dropdown">
+          <button class="hover:text-accent-dark transition-colors flex items-center gap-1">Curtains <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></button>
+          <div class="dropdown-menu absolute top-full left-0 bg-white shadow-lg rounded mt-1 py-1 w-40 z-50">
+            <a href="curtains.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Curtains</a>
+            <a href="curtains-gallery.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Gallery</a>
+          </div>
+        </div>
+        <div class="relative nav-dropdown">
+          <button class="hover:text-accent-dark transition-colors flex items-center gap-1">Shutters <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></button>
+          <div class="dropdown-menu absolute top-full left-0 bg-white shadow-lg rounded mt-1 py-1 w-44 z-50">
+            <a href="plantation-shutters.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Plantation Shutters</a>
+            <a href="shutters-gallery.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Gallery</a>
+          </div>
+        </div>
+        <div class="relative nav-dropdown">
+          <button class="hover:text-accent-dark transition-colors flex items-center gap-1 whitespace-nowrap">Outdoor Blinds <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></button>
+          <div class="dropdown-menu top-full left-0 bg-white shadow-lg rounded mt-1 py-1 w-36 z-50">
+            <a href="awnings.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Awnings</a>
+            <a href="outdoor-blinds-gallery.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Gallery</a>
+          </div>
+        </div>
+        <a href="automation.html" class="hover:text-accent-dark transition-colors">Automation</a>
+      </div>
+      <a href="contact.html" class="bg-accent text-white text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-accent-dark transition-colors whitespace-nowrap ml-4">Get a Free Quote</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <div class="relative w-full overflow-hidden" style="height:520px;">
+    <img src=".claude/Starlightphotos/Vertical%20blind/Dining.jpg" alt="Vertical Blinds" class="absolute inset-0 w-full h-full object-cover" style="object-position:center 40%;">
+    <div class="absolute inset-0 bg-black/40"></div>
+    <div class="absolute bottom-6 right-6">
+      <span class="bg-accent/90 text-white font-semibold text-2xl px-10 py-4 rounded-xl">Vertical Blinds</span>
+    </div>
+  </div>
+
+  <!-- Intro -->
+  <section class="py-14 px-4">
+    <div class="max-w-site mx-auto grid grid-cols-2 gap-12 items-center">
+      <div>
+        <h1 class="text-2xl font-semibold text-dark mb-4">Introducing Vertical Blinds – where style &amp; functionality collide.</h1>
+        <p class="text-sm font-light text-gray-600 leading-relaxed mb-3">Revive the style of your windows with our Vertical Blinds, offering a modern and sophisticated solution. These blinds not only provide privacy but also allow you to control the amount of light entering your space. With a wide selection of fabrics and colours you can personalise your blinds to perfectly complement any room.</p>
+      </div>
+      <div class="overflow-hidden rounded-2xl" style="max-height:420px;">
+        <img src=".claude/Starlightphotos/Vertical%20blind/Vertical%20fabric.jpg" alt="Vertical Blinds Lifestyle" class="w-full h-full object-cover">
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose -->
+  <section class="py-16 px-4 bg-gray-50">
+    <div class="max-w-site mx-auto">
+      <h2 class="text-accent-dark text-2xl font-semibold mb-10">Why choose Vertical Blinds?</h2>
+      <div class="grid grid-cols-5 gap-8 items-start">
+        <div class="col-span-3 grid grid-cols-2 gap-6">
+          <div class="border-l-2 border-accent pl-4">
+            <h3 class="font-semibold text-dark text-sm mb-2">Light Control</h3>
+            <p class="text-xs font-light text-gray-500 leading-relaxed">Vertical blinds allow you to precisely manage the amount of natural light entering any room. Simply tilt the slats to your preferred angle for the perfect ambience throughout the day.</p>
+          </div>
+          <div class="border-l-2 border-accent pl-4">
+            <h3 class="font-semibold text-dark text-sm mb-2">Quick Cleaning</h3>
+            <p class="text-xs font-light text-gray-500 leading-relaxed">Maintaining vertical blinds is simple and fast. Individual slats can be easily wiped clean or removed for a more thorough wash, making them a hygienic choice for any environment.</p>
+          </div>
+          <div class="border-l-2 border-accent pl-4">
+            <h3 class="font-semibold text-dark text-sm mb-2">Versatility</h3>
+            <p class="text-xs font-light text-gray-500 leading-relaxed">Ideal for large windows, floor-to-ceiling glazing, and sliding doors, vertical blinds are an incredibly versatile solution that works beautifully in any style of home or commercial space.</p>
+          </div>
+          <div class="border-l-2 border-accent pl-4">
+            <h3 class="font-semibold text-dark text-sm mb-2">Sheer Coverage</h3>
+            <p class="text-xs font-light text-gray-500 leading-relaxed">Our sheer fabric options provide soft, diffused light while maintaining your privacy throughout the day. Enjoy a beautiful, light-filled space without sacrificing your comfort or security.</p>
+          </div>
+        </div>
+        <div class="col-span-2 overflow-hidden rounded-2xl">
+          <img src=".claude/Starlightphotos/Vertical%20blind/Vert.jpg" alt="Vertical Blinds Close-up" class="w-full h-full object-cover" style="max-height:340px;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Discover Your Choices -->
+  <section class="py-12 px-4">
+    <div class="max-w-site mx-auto">
+      <h2 class="text-accent-dark text-2xl font-semibold mb-8 text-center">Discover Your Choices</h2>
+      <div class="grid grid-cols-3 gap-6">
+        <div>
+          <p class="text-xs font-semibold text-dark uppercase tracking-wide mb-3">Fabric</p>
+          <div class="w-full h-48 bg-gray-100 rounded-xl mb-3 pop-hover"></div>
+          <p class="text-xs font-light text-gray-600">Choose from a comprehensive range of fabrics including sheer, blockout and textured options.</p>
+          <p class="text-xs font-light text-gray-500 mt-1">Available in a wide variety of colours and patterns.</p>
+        </div>
+        <div>
+          <p class="text-xs font-semibold text-dark uppercase tracking-wide mb-3">Bottom Weights</p>
+          <div class="w-full h-48 bg-gray-100 rounded-xl mb-3 pop-hover"></div>
+          <p class="text-xs font-light text-gray-600">Bottom weights keep your vertical slats hanging perfectly straight and prevent them from swinging in the breeze.</p>
+          <p class="text-xs font-light text-gray-500 mt-1">Available in chain or chain-free configurations.</p>
+        </div>
+        <div>
+          <p class="text-xs font-semibold text-dark uppercase tracking-wide mb-3">Track Colour</p>
+          <div class="w-full h-48 bg-gray-100 rounded-xl mb-3 pop-hover"></div>
+          <p class="text-xs font-light text-gray-600">Select a track colour to perfectly match or contrast your interior for a polished, seamless finish.</p>
+          <p class="text-xs font-light text-gray-500 mt-1">White, silver, and custom colour options available.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Colour Swatches -->
+  <section class="py-12 px-4 bg-gray-50">
+    <div class="max-w-site mx-auto">
+      <h2 class="text-accent-dark text-2xl font-semibold mb-2 text-center">Personalise with your favourite colours</h2>
+      <p class="text-xs font-light text-gray-500 text-center mb-2">Choose from our range of fabric types to find the perfect look for your space.</p>
+      <p class="text-xs font-light text-gray-400 text-center mb-8">Swatches shown are indicative — actual colours may vary slightly.</p>
+      <div class="flex justify-center gap-8">
+        <div class="text-center">
+          <div class="w-32 h-20 bg-gray-100 rounded mb-2 pop-hover"></div>
+          <p class="text-xs font-light text-dark">Blackout</p>
+        </div>
+        <div class="text-center">
+          <div class="w-32 h-20 bg-gray-100 rounded mb-2 pop-hover"></div>
+          <p class="text-xs font-light text-dark">Sheerweave</p>
+        </div>
+        <div class="text-center">
+          <div class="w-32 h-20 bg-gray-100 rounded mb-2 pop-hover"></div>
+          <p class="text-xs font-light text-dark">Lightfilter</p>
+        </div>
+      </div>
+      <div class="text-center mt-8">
+        <button class="border border-dark text-dark text-xs font-semibold px-8 py-2.5 rounded-full hover:border-accent-dark hover:text-accent-dark transition-colors">Explore our Full Range</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Expert In-Home Consultations -->
+  <section id="contact" class="relative overflow-hidden" style="min-height:400px;">
+    <img src=".claude/Starlightphotos/Vertical%20blind/Store%20trap%C3%A8ze.jpg" alt="Expert Consultations" class="absolute inset-0 w-full h-full object-cover" style="filter:brightness(0.4);">
+    <div class="absolute inset-0 bg-black/20"></div>
+    <div class="relative z-10 py-16 px-4">
+      <div class="max-w-site mx-auto">
+        <h2 class="text-white text-3xl font-semibold mb-4">Expert In-Home Consultations</h2>
+        <p class="text-sm font-light text-white/80 leading-relaxed mb-6 max-w-xl">Our in-home consultation service takes the hassle out of buying new blinds. We'll bring a range of fabric samples to you so you can see how they look against your existing décor. Our expert advisors will provide bespoke advice and guidance, ensuring you make an informed decision you'll be happy with.</p>
+        <a href="contact.html" class="bg-accent text-white text-xs font-semibold px-6 py-3 rounded-full hover:bg-accent-dark transition-colors">Get a Free Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Upload House Plans -->
+  <section class="bg-white py-16 px-4 border-t border-gray-100">
+    <div class="max-w-site mx-auto grid grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-2xl font-semibold text-dark mb-4">Upload House Plans</h2>
+        <p class="text-sm font-light text-gray-600 leading-relaxed mb-6">Ready to start transforming your home with our window furnishings? Start by uploading your house plans, and an expert consultant will be in touch to guide you through the process. We'll provide an approximate price and get started on making your vision a reality.</p>
+        <button class="border border-dark text-dark text-xs font-semibold px-6 py-2.5 rounded-full hover:border-accent-dark hover:text-accent-dark transition-colors">Upload here</button>
+      </div>
+      <div class="overflow-hidden rounded-2xl" style="max-height:360px;">
+        <img src=".claude/Starlightphotos/Vertical%20blind/Vertical%20living.jpg" alt="Vertical Blinds Living Room" class="w-full h-full object-cover">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-gray-100 py-12 px-4">
+    <div class="max-w-site mx-auto grid grid-cols-5 gap-6">
+      <div class="col-span-1">
+        <div class="flex items-center mb-4"><div style="width:130px;height:34px;overflow:hidden;"><img src="../../../starlight logo website updated.png" alt="Starlight" style="height:90px;width:auto;max-width:none;margin-top:-24px;margin-left:-40px;"></div></div>
+        <span class="font-bold text-lg block mb-4" style="color:#1a1a1a; letter-spacing:-0.5px;">Starlight</span>
+        <div class="flex gap-2">
+          <div class="w-6 h-6 bg-gray-200 rounded-full"></div>
+          <div class="w-6 h-6 bg-gray-200 rounded-full"></div>
+          <div class="w-6 h-6 bg-gray-200 rounded-full"></div>
+          <div class="w-6 h-6 bg-gray-200 rounded-full"></div>
+        </div>
+      </div>
+      <div>
+        <h4 class="font-semibold text-xs text-dark mb-3">Contact</h4>
+        <p class="text-xs font-light text-accent-dark mb-1">Phone:</p>
+        <p class="text-xs font-light text-accent-dark mb-3">1300 000 000</p>
+        <p class="text-xs font-light text-accent-dark">Email us</p>
+        <p class="text-xs font-light text-accent-dark">info@starlightshades.com.au</p>
+      </div>
+      <div>
+        <h4 class="font-semibold text-xs text-dark mb-3">Information</h4>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-xs font-light text-gray-500 hover:text-accent-dark">Lifetime Guarantee</a></li>
+          <li><a href="#" class="text-xs font-light text-gray-500 hover:text-accent-dark">Child Safety</a></li>
+          <li><a href="#" class="text-xs font-light text-gray-500 hover:text-accent-dark">Work With Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold text-xs text-dark mb-3">Help</h4>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-xs font-light text-gray-500 hover:text-accent-dark">Tell the Boss</a></li>
+          <li><a href="#" class="text-xs font-light text-gray-500 hover:text-accent-dark">Care Instructions</a></li>
+          <li><a href="#" class="text-xs font-light text-gray-500 hover:text-accent-dark">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold text-xs text-dark mb-3">Policies</h4>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-xs font-light text-gray-500 hover:text-accent-dark">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Chat Button -->
+  <a href="contact.html" class="fixed bottom-6 right-6 bg-accent text-white text-xs font-semibold px-4 py-2.5 rounded-full shadow-lg flex items-center gap-2 hover:bg-accent-dark transition-colors z-50">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg>
+    Chat to an Expert
+  </a>
+
+<script>
+  document.querySelectorAll('.nav-dropdown').forEach(function(dropdown) {
+    var menu = dropdown.querySelector('.dropdown-menu');
+    var timeout;
+    dropdown.addEventListener('mouseenter', function() {
+      clearTimeout(timeout);
+      menu.style.display = 'block';
+    });
+    dropdown.addEventListener('mouseleave', function() {
+      timeout = setTimeout(function() { menu.style.display = 'none'; }, 150);
+    });
+    menu.addEventListener('mouseenter', function() { clearTimeout(timeout); });
+    menu.addEventListener('mouseleave', function() {
+      timeout = setTimeout(function() { menu.style.display = 'none'; }, 150);
+    });
+  });
+</script>
+</body>
+</html>

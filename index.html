@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Starlight Shades</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+html, body { width:100%; height:100%; overflow:hidden; background:#fff; }
+
+#launch {
+  position:fixed; inset:0; z-index:1;
+  background:#fff;
+  display:flex; align-items:center; justify-content:center;
+  opacity:1;
+  transition:opacity 0.9s ease;
+}
+
+#logo-img {
+  display:block;
+  width:820px;
+  height:auto;
+  opacity:0;
+  will-change:opacity;
+  transition:opacity 0.9s cubic-bezier(0.4,0,0.2,1);
+}
+#logo-img.show { opacity:1; }
+
+.dot {
+  position:fixed;
+  border-radius:50%;
+  opacity:0;
+  pointer-events:none;
+  z-index:2;
+  will-change:transform,opacity;
+}
+#dot1 { background:#6d6d6d; }
+#dot2 { background:#e8a280; }
+#dot3 { background:#e96400; }
+</style>
+</head>
+<body>
+
+<div id="launch">
+  <img id="logo-img" src="../../../starlight logo web entry.png" alt="Starlight Shades">
+</div>
+
+<div id="dot1" class="dot"></div>
+<div id="dot2" class="dot"></div>
+<div id="dot3" class="dot"></div>
+
+<script>
+(function () {
+  var launch  = document.getElementById('launch');
+  var logoImg = document.getElementById('logo-img');
+  var dots    = ['dot1','dot2','dot3'].map(function(id){ return document.getElementById(id); });
+
+  // Timeline (ms)
+  var T_FADEIN  = 0;    // dots start fading in (staggered +80/210/340)
+  var T_MOVE    = 480;  // dots shrink + fly to logo position (~720ms flight)
+  var T_LOGOIN  = 1250; // logo fades in — CSS dots still at final position on top
+  var T_DOTOUT  = 1600; // CSS dots fade out after logo is partially visible
+  var T_TOTAL   = 3100; // page fade + redirect
+
+  function run() {
+    requestAnimationFrame(function() {
+      requestAnimationFrame(function() {
+
+        var r = logoImg.getBoundingClientRect();
+        if (r.width < 10) { setTimeout(run, 50); return; }
+
+        var scl = r.width / 2402; // PNG natural width 2402px
+
+        // Pixel-measured dot centres & radii in the PNG (2402 x 1047)
+        // Sampled directly from starlight logo web entry.png
+        var nat = [
+          { cx: 1262, cy: 423, r: 33 },  // grey
+          { cx: 1344, cy: 416, r: 34 },  // peach
+          { cx: 1404, cy: 416, r: 26 },  // orange
+        ];
+
+        var finals = nat.map(function(n) {
+          return {
+            x: r.left + n.cx * scl,
+            y: r.top  + n.cy * scl,
+            r: Math.max(4, n.r * scl),
+          };
+        });
+
+        var vcx = window.innerWidth  / 2;
+        var vcy = window.innerHeight / 2;
+        var sR  = 42;
+        var gap = sR * 2 + 14;
+
+        // Phase 0 — place dots at final geometry, apply starting transform
+        // (no transition active yet so this sets the initial state silently)
+        dots.forEach(function(dot, i) {
+          var f = finals[i];
+          var startScale = sR / f.r;
+          var tx = (vcx + (i - 1) * gap) - f.x;
+          var ty = vcy - f.y;
+          dot.style.width     = f.r * 2 + 'px';
+          dot.style.height    = f.r * 2 + 'px';
+          dot.style.left      = (f.x - f.r) + 'px';
+          dot.style.top       = (f.y - f.r) + 'px';
+          dot.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + startScale + ')';
+        });
+
+        // One more rAF to commit the initial state to the compositor,
+        // THEN set transition once — it will never change again.
+        requestAnimationFrame(function() {
+          dots.forEach(function(dot) {
+            dot.style.transition = 'transform 0.72s cubic-bezier(0.4,0,0.2,1), opacity 0.32s ease';
+          });
+
+          // Phase 1 — dots fade in (staggered)
+          setTimeout(function(){ dots[0].style.opacity = '1'; }, T_FADEIN + 80);
+          setTimeout(function(){ dots[1].style.opacity = '1'; }, T_FADEIN + 210);
+          setTimeout(function(){ dots[2].style.opacity = '1'; }, T_FADEIN + 340);
+
+          // Phase 2 — fly + shrink: animate transform to identity (GPU only, no layout)
+          setTimeout(function() {
+            dots.forEach(function(dot) {
+              dot.style.transform = 'translate(0,0) scale(1)';
+            });
+          }, T_MOVE);
+
+          // Phase 3 — logo fades in with CSS dots still on top masking logo's own dots
+          setTimeout(function() {
+            logoImg.classList.add('show');
+          }, T_LOGOIN);
+
+          // Phase 4 — CSS dots fade out; logo's dots seamlessly take their place
+          setTimeout(function() {
+            dots.forEach(function(dot) {
+              dot.style.opacity = '0';
+            });
+          }, T_DOTOUT);
+
+          // Phase 5 — fade page out + redirect
+          setTimeout(function() {
+            launch.style.opacity = '0';
+            setTimeout(function() { window.location.href = 'home.html'; }, 950);
+          }, T_TOTAL);
+        });
+
+      });
+    });
+  }
+
+  if (logoImg.complete && logoImg.naturalWidth) { run(); }
+  else { logoImg.addEventListener('load', run); }
+
+})();
+</script>
+</body>
+</html>

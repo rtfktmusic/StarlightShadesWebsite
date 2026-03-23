@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Awnings – Starlight Shades</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { accent: '#FBC4A1', 'accent-dark': '#FF9B60', dark: '#3B3D40' },
+          fontFamily: { poppins: ['Poppins', 'sans-serif'] },
+          maxWidth: { site: '980px' }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Poppins', sans-serif; color: #3B3D40; }
+    .dropdown-menu { display: none; position: absolute; }
+    .pop-hover { transition: transform 0.3s ease; }
+    .pop-hover:hover { transform: scale(1.05); }
+  </style>
+</head>
+<body class="bg-white">
+
+  <!-- Navigation -->
+  <nav class="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
+    <div class="max-w-site mx-auto px-4 flex items-center justify-between h-16">
+      <a href="home.html" style="display:block;width:150px;height:44px;overflow:hidden;flex-shrink:0;"><img src="../../../starlight logo website updated.png" alt="Starlight" style="height:120px;width:auto;max-width:none;margin-top:-40px;margin-left:-54px;"></a>
+      <div class="hidden lg:flex items-center gap-5 text-sm font-normal text-dark">
+        <a href="home.html" class="hover:text-accent-dark transition-colors">Home</a>
+        <a href="about.html" class="hover:text-accent-dark transition-colors">About</a>
+        <div class="relative nav-dropdown">
+          <button class="hover:text-accent-dark transition-colors flex items-center gap-1 whitespace-nowrap">Indoor Blinds <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></button>
+          <div class="dropdown-menu absolute top-full left-0 bg-white shadow-lg rounded mt-1 py-1 w-40 z-50">
+            <a href="roller-blinds.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Roller Blinds</a>
+            <a href="vertical-blinds.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Vertical Blinds</a>
+            <a href="indoor-blinds-gallery.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Gallery</a>
+          </div>
+        </div>
+        <div class="relative nav-dropdown">
+          <button class="hover:text-accent-dark transition-colors flex items-center gap-1">Curtains <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></button>
+          <div class="dropdown-menu absolute top-full left-0 bg-white shadow-lg rounded mt-1 py-1 w-40 z-50">
+            <a href="curtains.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Curtains</a>
+            <a href="curtains-gallery.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Gallery</a>
+          </div>
+        </div>
+        <div class="relative nav-dropdown">
+          <button class="hover:text-accent-dark transition-colors flex items-center gap-1">Shutters <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></button>
+          <div class="dropdown-menu absolute top-full left-0 bg-white shadow-lg rounded mt-1 py-1 w-44 z-50">
+            <a href="plantation-shutters.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Plantation Shutters</a>
+            <a href="shutters-gallery.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Gallery</a>
+          </div>
+        </div>
+        <div class="relative nav-dropdown">
+          <button class="hover:text-accent-dark transition-colors flex items-center gap-1 whitespace-nowrap">Outdoor Blinds <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></button>
+          <div class="dropdown-menu top-full left-0 bg-white shadow-lg rounded mt-1 py-1 w-36 z-50">
+            <a href="awnings.html" class="block px-4 py-2 text-xs bg-orange-50 text-accent-dark font-semibold">Awnings</a>
+          </div>
+        </div>
+        <a href="automation.html" class="hover:text-accent-dark transition-colors">Automation</a>
+      </div>
+      <a href="contact.html" class="bg-accent text-white text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-accent-dark transition-colors whitespace-nowrap ml-4">Get a Free Quote</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <div class="relative w-full overflow-hidden">
+    <img src=".claude/Starlightphotos/Awning%20Photos/awning%20far.jpg" alt="Awnings" class="w-full h-auto block" style="margin-top:-33%;">
+    <div class="absolute inset-0 bg-black/40"></div>
+    <div class="absolute bottom-6 right-6">
+      <span class="bg-accent/90 text-white font-semibold text-2xl px-10 py-4 rounded-xl">Awnings</span>
+    </div>
+  </div>
+
+  <!-- Intro -->
+  <section class="py-12 px-4 text-center">
+    <div class="max-w-2xl mx-auto">
+      <h1 class="text-2xl font-semibold text-dark mb-4">Introducing Awnings – the outdoor solution for any window.</h1>
+      <p class="text-sm font-light text-gray-600 leading-relaxed mb-3">Enhance your home's curb appeal and energy efficiency with our stylish window awnings. Designed to provide shade and reduce glare, our awnings protect your interiors from harmful UV rays while keeping your home cooler in summer &amp; warmer in winter. Available in a variety of styles, colours, and materials, our window awnings add both functionality and aesthetic charm, making them a perfect addition to any home.</p>
+    </div>
+  </section>
+
+  <!-- Lifestyle Image -->
+  <div class="max-w-site mx-auto px-4 mb-12">
+    <img src=".claude/Starlightphotos/Awning%20Photos/Awning%20zipgrip%20srs%20patio.jpg" alt="Awnings Lifestyle" class="w-full h-auto block rounded-xl">
+  </div>
+
+  <!-- Why Choose -->
+  <section class="py-16 px-4 bg-gray-50">
+    <div class="max-w-site mx-auto">
+      <h2 class="text-accent-dark text-2xl font-semibold mb-10 text-center">Why choose Awnings?</h2>
+      <div class="grid grid-cols-2 gap-10 items-center">
+        <!-- Left: image -->
+        <img src=".claude/Starlightphotos/Awning%20Photos/Awning%20srs.jpg" alt="Awning outdoor living" class="w-full h-auto block rounded-2xl">
+        <!-- Right: 2x2 benefit grid -->
+        <div class="grid grid-cols-2 gap-6">
+          <div>
+            <h3 class="font-semibold text-dark text-sm mb-2">Cost Saving Solution</h3>
+            <p class="text-xs font-light text-gray-500 leading-relaxed">Awnings significantly reduce heat gain and lower your air conditioning costs — a smart investment that pays for itself over time.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-dark text-sm mb-2">Endless Style</h3>
+            <p class="text-xs font-light text-gray-500 leading-relaxed">Choose from an extensive range of styles, fabrics, and colours tailored to complement any architectural style, traditional or contemporary.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-dark text-sm mb-2">Enhanced Privacy</h3>
+            <p class="text-xs font-light text-gray-500 leading-relaxed">Awnings create a natural visual barrier between your outdoor spaces and the street, giving you freedom and peace of mind.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-dark text-sm mb-2">Increased Living Area</h3>
+            <p class="text-xs font-light text-gray-500 leading-relaxed">Transform patios, decks, and alfresco areas into comfortable year-round living spaces, effectively extending your home.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Discover Your Choices -->
+  <section class="py-12 px-4">
+    <div class="max-w-site mx-auto">
+      <h2 class="text-accent-dark text-2xl font-semibold mb-8 text-center">Discover Your Choices</h2>
+      <div class="grid grid-cols-3 gap-6">
+        <div>
+          <p class="text-xs font-semibold text-dark uppercase tracking-wide mb-3">Style</p>
+          <img src="https://images.unsplash.com/photo-1688142818737-65f8bebb4d03?w=800&q=80" alt="Style" class="w-full h-48 object-cover rounded-xl mb-3 pop-hover">
+          <p class="text-xs font-light text-gray-600">Choose from straight drop, pivot arm, retractable, or folding arm awnings to suit your specific outdoor space and requirements.</p>
+          <p class="text-xs font-light text-gray-500 mt-1">Custom sizing available to fit any window or outdoor area.</p>
+        </div>
+        <div>
+          <p class="text-xs font-semibold text-dark uppercase tracking-wide mb-3">Colour</p>
+          <img src="https://images.unsplash.com/photo-1659767151200-f2543af40c44?w=800&q=80" alt="Colour" class="w-full h-48 object-cover rounded-xl mb-3 pop-hover">
+          <p class="text-xs font-light text-gray-600">Select from our extensive colour palette to match your home's exterior, garden, and personal style preferences perfectly.</p>
+          <p class="text-xs font-light text-gray-500 mt-1">Solid, striped, and pattern options available.</p>
+        </div>
+        <div>
+          <p class="text-xs font-semibold text-dark uppercase tracking-wide mb-3">Operation</p>
+          <img src="https://images.unsplash.com/photo-1625465588028-458f59e19ee6?w=800&q=80" alt="Operation" class="w-full h-48 object-cover rounded-xl mb-3 pop-hover">
+          <p class="text-xs font-light text-gray-600">Manual crank, spring-loaded, or motorised operation available. Motorised systems can include wind sensors for added protection.</p>
+          <p class="text-xs font-light text-gray-500 mt-1">Smart home integration available on motorised models.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Colour Swatches -->
+  <section class="py-12 px-4 bg-gray-50">
+    <div class="max-w-site mx-auto">
+      <h2 class="text-accent-dark text-2xl font-semibold mb-2 text-center">Personalise with your favourite colours</h2>
+      <p class="text-xs font-light text-gray-500 text-center mb-2">Choose from our premium outdoor fabric options designed to withstand the elements.</p>
+      <p class="text-xs font-light text-gray-400 text-center mb-8">Swatches shown are indicative — actual colours may vary slightly.</p>
+      <div class="flex justify-center gap-8">
+        <div class="text-center">
+          <img src="https://images.unsplash.com/photo-1591195854242-8804547cdcab?w=400&q=80" alt="Canvas" class="w-32 h-20 object-cover rounded mb-2 pop-hover">
+          <p class="text-xs font-light text-dark">Canvas</p>
+        </div>
+        <div class="text-center">
+          <img src="https://images.unsplash.com/photo-1730326405868-e6e4ee2cb475?w=400&q=80" alt="Mesh" class="w-32 h-20 object-cover rounded mb-2 pop-hover">
+          <p class="text-xs font-light text-dark">Mesh</p>
+        </div>
+        <div class="text-center">
+          <img src="https://images.unsplash.com/photo-1638176647525-0ec7b085519a?w=400&q=80" alt="Acrylic" class="w-32 h-20 object-cover rounded mb-2 pop-hover">
+          <p class="text-xs font-light text-dark">Acrylic</p>
+        </div>
+      </div>
+      <div class="text-center mt-8">
+        <button class="border border-dark text-dark text-xs font-semibold px-8 py-2.5 rounded-full hover:border-accent-dark hover:text-accent-dark transition-colors">Explore our Full Range</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Expert In-Home Consultations -->
+  <section id="contact" class="relative overflow-hidden">
+    <img src=".claude/Starlightphotos/Awning%20Photos/Shaw%20zipgrip.jpg" alt="Expert Consultations" class="w-full h-auto block" style="filter:brightness(0.45);">
+    <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+      <h2 class="text-white text-3xl font-semibold mb-4">Expert In-Home Consultations</h2>
+      <p class="text-white/80 text-sm font-light leading-relaxed mb-6 max-w-xl">Our in-home consultation service takes the hassle out of buying new awnings. We'll bring fabric samples to you so you can see how they look in your space. Our advisors provide bespoke guidance, ensuring you make an informed decision you'll love.</p>
+      <a href="#contact" class="bg-accent text-white text-xs font-semibold px-8 py-3 rounded-full hover:bg-accent-dark transition-colors">Get a Free Quote</a>
+    </div>
+  </section>
+
+  <!-- Upload House Plans -->
+  <section class="bg-white py-16 px-4 border-t border-gray-100">
+    <div class="max-w-site mx-auto grid grid-cols-2 gap-10 items-center">
+      <img src="../../../Architects-and-engineers-discussing-over-building-project-blueprint-in-meeting-room.avif" alt="Architects discussing house plans" class="w-full h-auto block rounded-3xl">
+      <div>
+        <h2 class="text-2xl font-semibold text-dark mb-4">Upload House Plans</h2>
+        <p class="text-sm font-light text-gray-600 leading-relaxed mb-6">Ready to start transforming your home? Upload your house plans and an expert consultant will be in touch to guide you through the process. We'll provide an approximate price and get started on making your vision a reality.</p>
+        <button class="border border-dark text-dark text-xs font-semibold px-6 py-2.5 rounded-full hover:border-accent-dark hover:text-accent-dark transition-colors">Upload here</button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-gray-100 py-12 px-4">
+    <div class="max-w-site mx-auto grid grid-cols-5 gap-6">
+      <div class="col-span-1">
+        <div class="flex items-center mb-4"><div style="width:130px;height:34px;overflow:hidden;"><img src="../../../starlight logo website updated.png" alt="Starlight" style="height:90px;width:auto;max-width:none;margin-top:-24px;margin-left:-40px;"></div></div>
+        <span class="font-bold text-lg block mb-4" style="color:#1a1a1a; letter-spacing:-0.5px;">Starlight</span>
+        <div class="flex gap-2">
+          <div class="w-6 h-6 bg-gray-200 rounded-full"></div>
+          <div class="w-6 h-6 bg-gray-200 rounded-full"></div>
+          <div class="w-6 h-6 bg-gray-200 rounded-full"></div>
+          <div class="w-6 h-6 bg-gray-200 rounded-full"></div>
+        </div>
+      </div>
+      <div>
+        <h4 class="font-semibold text-xs text-dark mb-3">Contact</h4>
+        <p class="text-xs font-light text-accent-dark mb-1">Phone:</p>
+        <p class="text-xs font-light text-accent-dark mb-3">1300 000 000</p>
+        <p class="text-xs font-light text-accent-dark">Email us</p>
+        <p class="text-xs font-light text-accent-dark">info@starlightshades.com.au</p>
+      </div>
+      <div>
+        <h4 class="font-semibold text-xs text-dark mb-3">Information</h4>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-xs font-light text-gray-500 hover:text-accent-dark">Lifetime Guarantee</a></li>
+          <li><a href="#" class="text-xs font-light text-gray-500 hover:text-accent-dark">Child Safety</a></li>
+          <li><a href="#" class="text-xs font-light text-gray-500 hover:text-accent-dark">Work With Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold text-xs text-dark mb-3">Help</h4>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-xs font-light text-gray-500 hover:text-accent-dark">Tell the Boss</a></li>
+          <li><a href="#" class="text-xs font-light text-gray-500 hover:text-accent-dark">Care Instructions</a></li>
+          <li><a href="#" class="text-xs font-light text-gray-500 hover:text-accent-dark">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold text-xs text-dark mb-3">Policies</h4>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-xs font-light text-gray-500 hover:text-accent-dark">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Chat Button -->
+  <a href="contact.html" class="fixed bottom-6 right-6 bg-accent text-white text-xs font-semibold px-4 py-2.5 rounded-full shadow-lg flex items-center gap-2 hover:bg-accent-dark transition-colors z-50">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg>
+    Chat to an Expert
+  </a>
+
+<script>
+  document.querySelectorAll('.nav-dropdown').forEach(function(dropdown) {
+    var menu = dropdown.querySelector('.dropdown-menu');
+    var timeout;
+    dropdown.addEventListener('mouseenter', function() {
+      clearTimeout(timeout);
+      menu.style.display = 'block';
+    });
+    dropdown.addEventListener('mouseleave', function() {
+      timeout = setTimeout(function() { menu.style.display = 'none'; }, 150);
+    });
+    menu.addEventListener('mouseenter', function() { clearTimeout(timeout); });
+    menu.addEventListener('mouseleave', function() {
+      timeout = setTimeout(function() { menu.style.display = 'none'; }, 150);
+    });
+  });
+</script>
+</body>
+</html>

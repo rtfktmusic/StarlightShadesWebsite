@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roller Blinds – Starlight Shades</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { accent: '#FBC4A1', 'accent-dark': '#FF9B60', dark: '#3B3D40' },
+          fontFamily: { poppins: ['Poppins', 'sans-serif'] },
+          maxWidth: { site: '980px' }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Poppins', sans-serif; color: #3B3D40; }
+    .dropdown-menu { display: none; position: absolute; }
+    .pop-hover { transition: transform 0.3s ease; }
+    .pop-hover:hover { transform: scale(1.05); }
+  </style>
+</head>
+<body class="bg-white">
+
+  <!-- Navigation -->
+  <nav class="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
+    <div class="max-w-site mx-auto px-4 flex items-center justify-between h-16">
+      <a href="home.html" style="display:block;width:150px;height:44px;overflow:hidden;flex-shrink:0;"><img src="../../../starlight logo website updated.png" alt="Starlight" style="height:120px;width:auto;max-width:none;margin-top:-40px;margin-left:-54px;"></a>
+      <div class="hidden lg:flex items-center gap-5 text-sm font-normal text-dark">
+        <a href="home.html" class="hover:text-accent-dark transition-colors">Home</a>
+        <a href="about.html" class="hover:text-accent-dark transition-colors">About</a>
+        <div class="relative nav-dropdown">
+          <button class="text-accent-dark font-semibold flex items-center gap-1">Indoor Blinds <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></button>
+          <div class="dropdown-menu absolute top-full left-0 bg-white shadow-lg rounded mt-1 py-1 w-40 z-50">
+            <a href="roller-blinds.html" class="block px-4 py-2 text-xs bg-orange-50 text-accent-dark font-semibold">Roller Blinds</a>
+            <a href="vertical-blinds.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Vertical Blinds</a>
+            <a href="indoor-blinds-gallery.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Gallery</a>
+          </div>
+        </div>
+        <div class="relative nav-dropdown">
+          <button class="hover:text-accent-dark transition-colors flex items-center gap-1">Curtains <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></button>
+          <div class="dropdown-menu absolute top-full left-0 bg-white shadow-lg rounded mt-1 py-1 w-40 z-50">
+            <a href="curtains.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Curtains</a>
+            <a href="curtains-gallery.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Gallery</a>
+          </div>
+        </div>
+        <div class="relative nav-dropdown">
+          <button class="hover:text-accent-dark transition-colors flex items-center gap-1">Shutters <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></button>
+          <div class="dropdown-menu absolute top-full left-0 bg-white shadow-lg rounded mt-1 py-1 w-44 z-50">
+            <a href="plantation-shutters.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Plantation Shutters</a>
+            <a href="shutters-gallery.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Gallery</a>
+          </div>
+        </div>
+        <div class="relative nav-dropdown">
+          <button class="hover:text-accent-dark transition-colors flex items-center gap-1 whitespace-nowrap">Outdoor Blinds <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></button>
+          <div class="dropdown-menu top-full left-0 bg-white shadow-lg rounded mt-1 py-1 w-36 z-50">
+            <a href="awnings.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Awnings</a>
+            <a href="outdoor-blinds-gallery.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Gallery</a>
+          </div>
+        </div>
+        <a href="automation.html" class="hover:text-accent-dark transition-colors">Automation</a>
+      </div>
+      <a href="contact.html" class="bg-accent text-white text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-accent-dark transition-colors whitespace-nowrap ml-4">Get a Free Quote</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <div class="relative w-full overflow-hidden" style="height:520px;">
+    <img src=".claude/Starlightphotos/Roller%20Blind%20Photos/jpegmini_optimized/Light%20filter.jpg" alt="Roller Blinds" class="absolute inset-0 w-full h-full object-cover" style="object-position:center 45%;">
+    <div class="absolute inset-0 bg-black/40"></div>
+    <div class="absolute bottom-6 right-6">
+      <span class="bg-accent/90 text-white font-semibold text-2xl px-10 py-4 rounded-xl">Roller Blinds</span>
+    </div>
+  </div>
+
+  <!-- Intro -->
+  <section class="py-14 px-4">
+    <div class="max-w-site mx-auto grid grid-cols-2 gap-12 items-center">
+      <div>
+        <h1 class="text-2xl font-semibold text-dark mb-4">Introducing Roller Blinds – the perfect solution for any space.</h1>
+        <p class="text-sm font-light text-gray-600 leading-relaxed">Roller blinds come in a variety of fabrics and designs, tailored to match any décor. They provide complete light control and privacy while enhancing the look of the space. Easy to use and maintain, roller blinds are a stylish, practical addition to any home or office.</p>
+      </div>
+      <div class="overflow-hidden rounded-2xl" style="max-height:420px;">
+        <img src=".claude/Starlightphotos/Roller%20Blind%20Photos/IMG_6749.png" alt="Roller Blinds Lifestyle" class="w-full h-full object-cover">
+      </div>
+    </div>
+  </section>
+
+  <!-- Fabric Visualiser -->
+  <section class="px-4 pb-10">
+    <div class="max-w-site mx-auto">
+      <div class="visualiser-container relative w-full overflow-hidden rounded-2xl" style="padding-bottom:67.75%;background:#1a1a1a;">
+        <!-- Room image -->
+        <div id="vis-image" class="absolute inset-0 bg-cover bg-center" style="background-image:url('https://placehold.co/1200x800/d0c8c0/666?text=Indoor+Day+Screens+Light');transition:background-image 0.4s ease;"></div>
+
+        <!-- Left control panel -->
+        <div class="absolute top-4 left-4 rounded-xl p-5 text-white z-10" style="width:210px;background:rgba(0,0,0,0.65);backdrop-filter:blur(8px);">
+          <h3 class="font-semibold text-xs mb-2 tracking-wide">Fabric Style</h3>
+          <label class="flex items-center gap-2 cursor-pointer mb-1.5">
+            <input type="radio" name="vis-style" value="screens" checked class="vis-radio accent-white w-3 h-3">
+            <span class="text-xs font-light">Screens</span>
+          </label>
+          <label class="flex items-center gap-2 cursor-pointer mb-1.5">
+            <input type="radio" name="vis-style" value="blockout" class="vis-radio accent-white w-3 h-3">
+            <span class="text-xs font-light">Blockout</span>
+          </label>
+          <label class="flex items-center gap-2 cursor-pointer mb-3">
+            <input type="radio" name="vis-style" value="lightfiltering" class="vis-radio accent-white w-3 h-3">
+            <span class="text-xs font-light">Light Filtering</span>
+          </label>
+
+          <h3 class="font-semibold text-xs mb-2 tracking-wide">Fabric Tone</h3>
+          <div class="flex gap-3">
+            <button class="vis-tone-btn" data-tone="light" style="width:48px;height:36px;background:#c8c8c8;border-radius:6px;border:2px solid #fff;transition:border-color .2s;"></button>
+            <button class="vis-tone-btn" data-tone="medium" style="width:48px;height:36px;background:#888;border-radius:6px;border:2px solid transparent;transition:border-color .2s;"></button>
+            <button class="vis-tone-btn" data-tone="dark" style="width:48px;height:36px;background:#3a3a3a;border-radius:6px;border:2px solid transparent;transition:border-color .2s;"></button>
+          </div>
+          <div class="flex gap-3 mt-1">
+            <span class="text-center text-xs font-light" style="width:48px;">Light</span>
+            <span class="text-center text-xs font-light" style="width:48px;">Medium</span>
+            <span class="text-center text-xs font-light" style="width:48px;">Dark</span>
+          </div>
+        </div>
+
+        <!-- Bottom toggle bar -->
+        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-3 z-10">
+          <div class="flex rounded-full overflow-hidden" style="background:rgba(0,0,0,0.5);backdrop-filter:blur(8px);">
+            <button class="vis-scene-btn px-4 py-1.5 text-xs font-semibold transition-colors" data-scene="indoor" style="background:#fff;color:#1a1a1a;border-radius:999px;">Indoor</button>
+            <button class="vis-scene-btn px-4 py-1.5 text-xs font-semibold transition-colors" data-scene="outdoor" style="background:transparent;color:#fff;border-radius:999px;">Outdoor</button>
+          </div>
+          <div class="flex rounded-full overflow-hidden" style="background:rgba(0,0,0,0.5);backdrop-filter:blur(8px);">
+            <button class="vis-time-btn px-4 py-1.5 text-xs font-semibold transition-colors" data-time="day" style="background:#fff;color:#1a1a1a;border-radius:999px;">Day</button>
+            <button class="vis-time-btn px-4 py-1.5 text-xs font-semibold transition-colors" data-time="night" style="background:transparent;color:#fff;border-radius:999px;">Night</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+  (function(){
+    var scene='indoor', time='day', style='screens', tone='light';
+    var img = document.getElementById('vis-image');
+    var section = img.closest('.max-w-site');
+
+    function update(){
+      var url='https://placehold.co/1200x800/d0c8c0/666?text='+scene+'+'+time+'+'+style+'+'+tone;
+      img.style.backgroundImage='url('+url+')';
+    }
+
+    section.querySelectorAll('input[name="vis-style"]').forEach(function(r){
+      r.addEventListener('change',function(){ style=this.value; update(); });
+    });
+
+    section.querySelectorAll('.vis-tone-btn').forEach(function(b){
+      b.addEventListener('click',function(){
+        tone=this.dataset.tone;
+        section.querySelectorAll('.vis-tone-btn').forEach(function(x){ x.style.borderColor='transparent'; });
+        this.style.borderColor='#fff';
+        update();
+      });
+    });
+
+    section.querySelectorAll('.vis-scene-btn').forEach(function(b){
+      b.addEventListener('click',function(){
+        scene=this.dataset.scene;
+        section.querySelectorAll('.vis-scene-btn').forEach(function(x){ x.style.background='transparent'; x.style.color='#fff'; });
+        this.style.background='#fff'; this.style.color='#1a1a1a';
+        update();
+      });
+    });
+
+    section.querySelectorAll('.vis-time-btn').forEach(function(b){
+      b.addEventListener('click',function(){
+        time=this.dataset.time;
+        section.querySelectorAll('.vis-time-btn').forEach(function(x){ x.style.background='transparent'; x.style.color='#fff'; });
+        this.style.background='#fff'; this.style.color='#1a1a1a';
+        update();
+      });
+    });
+  })();
+  </script>
+
+  <!-- Why Choose -->
+  <section class="py-16 px-4 bg-gray-50">
+    <div class="max-w-site mx-auto">
+      <h2 class="text-accent-dark text-2xl font-semibold mb-10">Why choose Roller Blinds?</h2>
+      <div class="grid grid-cols-4 gap-6">
+        <div class="border-l-2 border-accent pl-4">
+          <div class="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-accent-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="font-semibold text-dark text-sm mb-2">Cost Effective</h3>
+          <p class="text-xs font-light text-gray-500 leading-relaxed">Roller blinds offer excellent value for money without compromising on style or quality, making them a smart investment for any budget.</p>
+        </div>
+        <div class="border-l-2 border-accent pl-4">
+          <div class="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-accent-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+          </div>
+          <h3 class="font-semibold text-dark text-sm mb-2">Simple Maintenance</h3>
+          <p class="text-xs font-light text-gray-500 leading-relaxed">A simple wipe-down with a damp cloth is all it takes to keep your roller blinds looking fresh and new.</p>
+        </div>
+        <div class="border-l-2 border-accent pl-4">
+          <div class="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-accent-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+          </div>
+          <h3 class="font-semibold text-dark text-sm mb-2">Light &amp; Privacy Control</h3>
+          <p class="text-xs font-light text-gray-500 leading-relaxed">From sheer fabrics that filter light to blockout options providing complete darkness — full control in any room.</p>
+        </div>
+        <div class="border-l-2 border-accent pl-4">
+          <div class="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-accent-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"/></svg>
+          </div>
+          <h3 class="font-semibold text-dark text-sm mb-2">Easy Operation</h3>
+          <p class="text-xs font-light text-gray-500 leading-relaxed">Available in manual chain or motorised options, adjusting your blinds is quick and convenient for everyone.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Discover Your Choices -->
+  <section class="py-12 px-4">
+    <div class="max-w-site mx-auto">
+      <h2 class="text-accent-dark text-2xl font-semibold mb-8 text-center">Discover Your Choices</h2>
+      <div class="grid grid-cols-3 gap-6">
+        <div>
+          <p class="text-xs font-semibold text-dark uppercase tracking-wide mb-3">Fabric</p>
+          <div class="w-full h-48 rounded-xl mb-3 overflow-hidden"><img src=".claude/Starlightphotos/Discover%20your%20choices/Fabric.avif" alt="Fabric" class="w-full h-full object-cover pop-hover"></div>
+          <p class="text-xs font-light text-gray-600">Choose from a wide selection of premium fabrics including sheer, blockout and light-filtering options.</p>
+          <p class="text-xs font-light text-gray-500 mt-1">Available in hundreds of colours and textures.</p>
+        </div>
+        <div>
+          <p class="text-xs font-semibold text-dark uppercase tracking-wide mb-3">Operation</p>
+          <div class="w-full h-48 rounded-xl mb-3 overflow-hidden"><img src=".claude/Starlightphotos/Discover%20your%20choices/Operation.jpg" alt="Operation" class="w-full h-full object-cover pop-hover"></div>
+          <p class="text-xs font-light text-gray-600">Select from chain operation, spring-loaded systems, or motorisation for effortless control.</p>
+          <p class="text-xs font-light text-gray-500 mt-1">Motorised options compatible with smart home systems.</p>
+        </div>
+        <div>
+          <p class="text-xs font-semibold text-dark uppercase tracking-wide mb-3">Components</p>
+          <div class="w-full h-48 rounded-xl mb-3 overflow-hidden"><img src=".claude/Starlightphotos/Discover%20your%20choices/components.avif" alt="Components" class="w-full h-full object-cover pop-hover"></div>
+          <p class="text-xs font-light text-gray-600">Customise your hardware including tube size, bracket type, and bottom rail style.</p>
+          <p class="text-xs font-light text-gray-500 mt-1">Available in a range of finishes to complement your interior.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Colour Swatches -->
+  <section class="py-12 px-4 bg-gray-50">
+    <div class="max-w-site mx-auto">
+      <h2 class="text-accent-dark text-2xl font-semibold mb-2 text-center">Personalise with your favourite colours</h2>
+      <p class="text-xs font-light text-gray-500 text-center mb-2">Choose from our extensive range of fabric types to suit your style and needs.</p>
+      <p class="text-xs font-light text-gray-400 text-center mb-8">Swatches shown are indicative — actual colours may vary slightly.</p>
+      <div class="grid grid-cols-3 gap-6 max-w-3xl mx-auto">
+        <div class="text-center">
+          <div class="w-full h-44 rounded-xl mb-3 overflow-hidden"><img src=".claude/Starlightphotos/Personalise%20with%20your%20favourite%20colours/blackout.jpg" alt="Blackout" class="w-full h-full object-cover pop-hover"></div>
+          <p class="text-xs font-light text-dark">Blackout</p>
+        </div>
+        <div class="text-center">
+          <div class="w-full h-44 rounded-xl mb-3 overflow-hidden"><img src=".claude/Starlightphotos/Personalise%20with%20your%20favourite%20colours/Sheerweave.jpg" alt="Sheerweave" class="w-full h-full object-cover pop-hover"></div>
+          <p class="text-xs font-light text-dark">Sheerweave</p>
+        </div>
+        <div class="text-center">
+          <div class="w-full h-44 rounded-xl mb-3 overflow-hidden"><img src=".claude/Starlightphotos/Personalise%20with%20your%20favourite%20colours/Light%20filter.jpg" alt="Light Filter" class="w-full h-full object-cover pop-hover"></div>
+          <p class="text-xs font-light text-dark">Lightfilter</p>
+        </div>
+      </div>
+      <div class="text-center mt-8">
+        <button class="border border-dark text-dark text-xs font-semibold px-8 py-2.5 rounded-full hover:border-accent-dark hover:text-accent-dark transition-colors">Explore our Full Range</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Upgrade to Blind Motorisation -->
+  <section class="py-16 px-4">
+    <div class="max-w-site mx-auto grid grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-dark text-xl font-semibold mb-4" style="font-weight:500;">upgrade to blind motorisation</h2>
+        <p class="text-sm font-light text-gray-600 leading-relaxed mb-4">Motorised roller blinds bring an extra level of convenience to your home or office. With a remote control, you can easily open or close your blinds with minimal effort. For a more seamless experience, you can even automate the operation of your blinds based on your preferences.</p>
+        <p class="text-sm font-light text-gray-600 leading-relaxed mb-6">Our motorised blinds don't need to be connected to your electrics, and there are no wires. Instead, they are powered by battery.</p>
+        <a href="automation.html" class="inline-block bg-accent text-white text-xs font-semibold px-6 py-2.5 rounded-md hover:bg-accent-dark transition-colors">find out more</a>
+      </div>
+      <div class="relative">
+        <img src="remote.avif" alt="Blind Motorisation Remote Control" class="w-full h-auto rounded-lg object-cover">
+        <a href="contact.html" class="absolute bottom-4 right-4 bg-accent text-white text-xs font-semibold px-5 py-2 rounded-md hover:bg-accent-dark transition-colors">get a quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Best Price Guarantee -->
+  <section class="py-6 px-4" style="background:#f5a623;">
+    <div class="max-w-site mx-auto text-center">
+      <h3 class="text-white text-lg font-semibold italic mb-1">best price guarantee</h3>
+      <p class="text-white/90 text-xs font-light">Found a better price for the same product? We'll beat it!</p>
+    </div>
+  </section>
+
+  <!-- Expert In-Home Consultations -->
+  <section id="contact" class="relative overflow-hidden" style="min-height:340px;">
+    <img src=".claude/Starlightphotos/Roller%20Blind%20Photos/jpegmini_optimized/IMG_6201.jpg" alt="Expert Consultations" class="absolute inset-0 w-full h-full object-cover" style="filter:brightness(0.45);">
+    <div class="absolute inset-0 bg-black/20"></div>
+    <div class="relative z-10 py-16 px-4">
+      <div class="max-w-site mx-auto">
+        <h2 class="text-white text-3xl font-semibold mb-4">Expert In-Home Consultations</h2>
+        <p class="text-sm font-light text-white/80 leading-relaxed mb-6 max-w-xl">Our in-home consultation service takes the hassle out of buying new blinds. We'll bring a range of fabric samples to you so you can see how they look against your existing décor. Our expert advisors will provide bespoke advice and guidance, ensuring you make an informed decision you'll be happy with.</p>
+        <a href="#contact" class="inline-block bg-accent text-white text-xs font-semibold px-6 py-3 rounded-full hover:bg-accent-dark transition-colors">Get a Free Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Upload House Plans -->
+  <section class="bg-white py-16 px-4 border-t border-gray-100">
+    <div class="max-w-site mx-auto grid grid-cols-2 gap-12 items-center">
+      <img src="../../../Architects-and-engineers-discussing-over-building-project-blueprint-in-meeting-room.avif" alt="Architects discussing house plans" class="w-full h-auto block rounded-3xl">
+      <div>
+        <h2 class="text-2xl font-semibold text-dark mb-4">Upload House Plans</h2>
+        <p class="text-sm font-light text-gray-600 leading-relaxed mb-6">Ready to start transforming your home with our window furnishings? Start by uploading your house plans, and an expert consultant will be in touch to guide you through the process. We'll provide an approximate price and get started on making your vision a reality.</p>
+        <button class="border border-dark text-dark text-xs font-semibold px-6 py-2.5 rounded-full hover:border-accent-dark hover:text-accent-dark transition-colors">Upload here</button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-gray-100 py-12 px-4">
+    <div class="max-w-site mx-auto grid grid-cols-5 gap-6">
+      <div class="col-span-1">
+        <div class="flex items-center mb-4"><div style="width:130px;height:34px;overflow:hidden;"><img src="../../../starlight logo website updated.png" alt="Starlight" style="height:90px;width:auto;max-width:none;margin-top:-24px;margin-left:-40px;"></div></div>
+        <span class="font-bold text-lg block mb-4" style="color:#1a1a1a; letter-spacing:-0.5px;">Starlight</span>
+        <div class="flex gap-2">
+          <div class="w-6 h-6 bg-gray-200 rounded-full"></div>
+          <div class="w-6 h-6 bg-gray-200 rounded-full"></div>
+          <div class="w-6 h-6 bg-gray-200 rounded-full"></div>
+          <div class="w-6 h-6 bg-gray-200 rounded-full"></div>
+        </div>
+      </div>
+      <div>
+        <h4 class="font-semibold text-xs text-dark mb-3">Contact</h4>
+        <p class="text-xs font-light text-accent-dark mb-1">Phone:</p>
+        <p class="text-xs font-light text-accent-dark mb-3">1300 000 000</p>
+        <p class="text-xs font-light text-accent-dark">Email us</p>
+        <p class="text-xs font-light text-accent-dark">info@starlightshades.com.au</p>
+      </div>
+      <div>
+        <h4 class="font-semibold text-xs text-dark mb-3">Information</h4>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-xs font-light text-gray-500 hover:text-accent-dark">Lifetime Guarantee</a></li>
+          <li><a href="#" class="text-xs font-light text-gray-500 hover:text-accent-dark">Child Safety</a></li>
+          <li><a href="#" class="text-xs font-light text-gray-500 hover:text-accent-dark">Work With Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold text-xs text-dark mb-3">Help</h4>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-xs font-light text-gray-500 hover:text-accent-dark">Tell the Boss</a></li>
+          <li><a href="#" class="text-xs font-light text-gray-500 hover:text-accent-dark">Care Instructions</a></li>
+          <li><a href="#" class="text-xs font-light text-gray-500 hover:text-accent-dark">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold text-xs text-dark mb-3">Policies</h4>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-xs font-light text-gray-500 hover:text-accent-dark">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Chat Button -->
+  <a href="contact.html" class="fixed bottom-6 right-6 bg-accent text-white text-xs font-semibold px-4 py-2.5 rounded-full shadow-lg flex items-center gap-2 hover:bg-accent-dark transition-colors z-50">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg>
+    Chat to an Expert
+  </a>
+
+<script>
+  document.querySelectorAll('.nav-dropdown').forEach(function(dropdown) {
+    var menu = dropdown.querySelector('.dropdown-menu');
+    var timeout;
+    dropdown.addEventListener('mouseenter', function() {
+      clearTimeout(timeout);
+      menu.style.display = 'block';
+    });
+    dropdown.addEventListener('mouseleave', function() {
+      timeout = setTimeout(function() { menu.style.display = 'none'; }, 150);
+    });
+    menu.addEventListener('mouseenter', function() { clearTimeout(timeout); });
+    menu.addEventListener('mouseleave', function() {
+      timeout = setTimeout(function() { menu.style.display = 'none'; }, 150);
+    });
+  });
+</script>
+</body>
+</html>

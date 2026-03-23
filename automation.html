@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Automation – Starlight Shades</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { accent: '#FBC4A1', 'accent-dark': '#FF9B60', dark: '#3B3D40' },
+          fontFamily: { poppins: ['Poppins', 'sans-serif'] },
+          maxWidth: { site: '980px' }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Poppins', sans-serif; color: #3B3D40; }
+    .dropdown-menu { display: none; position: absolute; }
+    .pop-hover { transition: transform 0.3s ease; }
+    .pop-hover:hover { transform: scale(1.05); }
+  </style>
+</head>
+<body class="bg-white">
+
+  <!-- Navigation -->
+  <nav class="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
+    <div class="max-w-site mx-auto px-4 flex items-center justify-between h-16">
+      <a href="home.html" style="display:block;width:150px;height:44px;overflow:hidden;flex-shrink:0;"><img src="../../../starlight logo website updated.png" alt="Starlight" style="height:120px;width:auto;max-width:none;margin-top:-40px;margin-left:-54px;"></a>
+      <div class="hidden lg:flex items-center gap-5 text-sm font-normal text-dark">
+        <a href="home.html" class="hover:text-accent-dark transition-colors">Home</a>
+        <a href="about.html" class="hover:text-accent-dark transition-colors">About</a>
+        <div class="relative nav-dropdown">
+          <button class="hover:text-accent-dark transition-colors flex items-center gap-1 whitespace-nowrap">Indoor Blinds <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></button>
+          <div class="dropdown-menu absolute top-full left-0 bg-white shadow-lg rounded mt-1 py-1 w-40 z-50">
+            <a href="roller-blinds.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Roller Blinds</a>
+            <a href="vertical-blinds.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Vertical Blinds</a>
+            <a href="indoor-blinds-gallery.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Gallery</a>
+          </div>
+        </div>
+        <div class="relative nav-dropdown">
+          <button class="hover:text-accent-dark transition-colors flex items-center gap-1">Curtains <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></button>
+          <div class="dropdown-menu absolute top-full left-0 bg-white shadow-lg rounded mt-1 py-1 w-40 z-50">
+            <a href="curtains.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Curtains</a>
+            <a href="curtains-gallery.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Gallery</a>
+          </div>
+        </div>
+        <div class="relative nav-dropdown">
+          <button class="hover:text-accent-dark transition-colors flex items-center gap-1">Shutters <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></button>
+          <div class="dropdown-menu absolute top-full left-0 bg-white shadow-lg rounded mt-1 py-1 w-44 z-50">
+            <a href="plantation-shutters.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Plantation Shutters</a>
+            <a href="shutters-gallery.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Gallery</a>
+          </div>
+        </div>
+        <div class="relative nav-dropdown">
+          <button class="hover:text-accent-dark transition-colors flex items-center gap-1 whitespace-nowrap">Outdoor Blinds <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></button>
+          <div class="dropdown-menu top-full left-0 bg-white shadow-lg rounded mt-1 py-1 w-36 z-50">
+            <a href="awnings.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Awnings</a>
+            <a href="outdoor-blinds-gallery.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Gallery</a>
+          </div>
+        </div>
+        <a href="automation.html" class="text-accent-dark font-semibold">Automation</a>
+      </div>
+      <a href="contact.html" class="bg-accent text-white text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-accent-dark transition-colors whitespace-nowrap ml-4">Get a Free Quote</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <div class="relative w-full h-80 overflow-hidden">
+    <img src="https://placehold.co/1200x420/c0bcb8/888888?text=Automation" alt="Automation" class="w-full h-full object-cover">
+    <div class="absolute inset-0 bg-black/40"></div>
+    <div class="absolute bottom-6 right-6">
+      <span class="bg-accent/90 text-white font-semibold text-2xl px-10 py-4 rounded-xl">Automation</span>
+    </div>
+  </div>
+
+  <!-- Intro -->
+  <section class="py-12 px-4 text-center">
+    <div class="max-w-2xl mx-auto">
+      <h1 class="text-2xl font-semibold text-dark mb-4">Introducing Home Automation – the perfect answer for contemporary lifestyles.</h1>
+      <p class="text-sm font-light text-gray-600 leading-relaxed mb-3">We are reinventing air, movement and comfort. Switching a controllable by the touch of a button, so why not blinds too? On the way home from work a simple touch of your smartphone or tablet can open or close your blinds, put as a premium on the lights, heater or air conditioner. The feature we once attributed to the rich and famous – motorisation and home automation have become an affordable addition to new and old homes of all scales.</p>
+    </div>
+  </section>
+
+  <!-- Lifestyle Image -->
+  <div class="max-w-site mx-auto px-4 mb-12">
+    <img src="https://placehold.co/980x320/c0bcb8/888888?text=Home+Automation+Lifestyle" alt="Home Automation Lifestyle" class="w-full h-80 object-cover rounded-xl">
+  </div>
+
+  <!-- Why Choose -->
+  <section class="py-12 px-4 bg-gray-50">
+    <div class="max-w-site mx-auto">
+      <h2 class="text-accent-dark text-2xl font-semibold mb-8 text-center">Why choose Home Automation?</h2>
+      <div class="grid grid-cols-4 gap-6">
+        <div class="text-center p-4">
+          <div class="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-accent-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+          </div>
+          <h3 class="font-semibold text-dark text-sm mb-2">Convenience</h3>
+          <p class="text-xs font-light text-gray-500 leading-relaxed">Control all your window coverings at the touch of a button from your smartphone, tablet, or wall switch. Schedule your blinds to open and close automatically at the times that suit your lifestyle.</p>
+        </div>
+        <div class="text-center p-4">
+          <div class="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-accent-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <h3 class="font-semibold text-dark text-sm mb-2">Energy Efficiency</h3>
+          <p class="text-xs font-light text-gray-500 leading-relaxed">Automated blinds can be programmed to respond to sunlight, temperature, and time of day, maximising insulation and reducing your reliance on heating and cooling systems throughout the year.</p>
+        </div>
+        <div class="text-center p-4">
+          <div class="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-accent-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <h3 class="font-semibold text-dark text-sm mb-2">Security &amp; Privacy</h3>
+          <p class="text-xs font-light text-gray-500 leading-relaxed">Set your blinds to open and close on a schedule while you are away, giving the impression the home is occupied. Enhance your home security without compromising on style or comfort.</p>
+        </div>
+        <div class="text-center p-4">
+          <div class="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-accent-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+          </div>
+          <h3 class="font-semibold text-dark text-sm mb-2">Child &amp; Pet Safety</h3>
+          <p class="text-xs font-light text-gray-500 leading-relaxed">Motorised blinds eliminate the need for cords and chains, creating a completely safe environment for children and pets. Enjoy complete peace of mind with a cord-free window covering solution.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Discover Your Choices -->
+  <section class="py-12 px-4">
+    <div class="max-w-site mx-auto">
+      <h2 class="text-accent-dark text-2xl font-semibold mb-8 text-center">Discover Your Choices</h2>
+      <div class="grid grid-cols-3 gap-6">
+        <div>
+          <p class="text-xs font-semibold text-dark uppercase tracking-wide mb-3">Product Type</p>
+          <img src="https://placehold.co/320x220/c8c4c0/999999?text=Product+Type" alt="Product Type" class="w-full h-48 object-cover rounded-xl mb-3 pop-hover">
+          <p class="text-xs font-light text-gray-600">Motorisation is available across our full range including roller blinds, curtains, vertical blinds, plantation shutters, and awnings.</p>
+          <p class="text-xs font-light text-gray-500 mt-1">Retrofit options available for existing window coverings.</p>
+        </div>
+        <div>
+          <p class="text-xs font-semibold text-dark uppercase tracking-wide mb-3">Battery vs Hardwired</p>
+          <img src="https://placehold.co/320x220/c8c4c0/999999?text=Battery+vs+Hardwired" alt="Battery vs Hardwired" class="w-full h-48 object-cover rounded-xl mb-3 pop-hover">
+          <p class="text-xs font-light text-gray-600">Choose between rechargeable battery-powered motors for easy installation, or hardwired systems for a completely wireless and permanent solution.</p>
+          <p class="text-xs font-light text-gray-500 mt-1">Solar charging options also available.</p>
+        </div>
+        <div>
+          <p class="text-xs font-semibold text-dark uppercase tracking-wide mb-3">Control</p>
+          <img src="https://placehold.co/320x220/c8c4c0/999999?text=Control+Options" alt="Control" class="w-full h-48 object-cover rounded-xl mb-3 pop-hover">
+          <p class="text-xs font-light text-gray-600">Operate via wall switch, remote control, smartphone app, or voice command. Group control allows you to manage multiple blinds simultaneously.</p>
+          <p class="text-xs font-light text-gray-500 mt-1">Timer and sun-tracking scheduling available.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Smart Home Integration -->
+  <section class="py-12 px-4 bg-gray-50">
+    <div class="max-w-site mx-auto">
+      <h2 class="text-accent-dark text-2xl font-semibold mb-2 text-center">Smart Home Integration</h2>
+      <p class="text-sm font-light text-gray-500 text-center mb-8 max-w-xl mx-auto">Our motorised systems are compatible with the world's leading smart home platforms, making integration into your existing setup effortless.</p>
+      <div class="flex justify-center gap-10 mb-12">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-2">
+            <span class="text-xs font-light text-gray-500">HomeKit</span>
+          </div>
+          <p class="text-xs font-light text-dark">Apple HomeKit</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-2">
+            <span class="text-xs font-light text-gray-500">Alexa</span>
+          </div>
+          <p class="text-xs font-light text-dark">Amazon Alexa</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-2">
+            <span class="text-xs font-light text-gray-500">Google</span>
+          </div>
+          <p class="text-xs font-light text-dark">Google Home</p>
+        </div>
+      </div>
+
+      <!-- Stay Sustainable -->
+      <div class="max-w-site mx-auto">
+        <div class="grid grid-cols-2 gap-8 items-center">
+          <img src="https://placehold.co/460x280/d4d0cc/aaaaaa?text=Stay+Sustainable" alt="Stay Sustainable" class="w-full h-56 object-cover rounded-xl">
+          <div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Stay Sustainable</h3>
+            <p class="text-sm font-light text-gray-600 leading-relaxed mb-3">Our automated blinds play a significant role in reducing your home's energy consumption. By intelligently managing sunlight and heat gain, they help maintain a comfortable indoor temperature naturally, reducing the load on your heating and cooling systems.</p>
+            <p class="text-xs font-light text-gray-500 leading-relaxed">Pair your motorised blinds with solar-powered charging accessories to further reduce your environmental footprint. Smart scheduling ensures your home is always at its most efficient, whether you are home or away.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Expert In-Home Consultations -->
+  <section id="contact" class="py-12 px-4">
+    <div class="max-w-site mx-auto">
+      <img src="https://placehold.co/980x260/e8e0d8/aaaaaa?text=Expert+In-Home+Consultations" alt="Expert Consultations" class="w-full h-64 object-cover rounded-xl mb-8">
+      <div class="text-center max-w-2xl mx-auto">
+        <h2 class="text-2xl font-semibold text-dark mb-4">Expert In-Home Consultations</h2>
+        <p class="text-sm font-light text-gray-600 leading-relaxed mb-6">Our in-home consultation service takes the hassle out of buying new blinds. We'll bring a range of fabric samples to you so you can see how they look against your existing décor. Our expert advisors will provide bespoke advice and guidance, ensuring you make an informed decision you'll be happy with. Choose our service for a stress-free way to find the perfect window covering.</p>
+        <a href="#contact" class="bg-accent text-white text-xs font-semibold px-6 py-3 rounded-full hover:bg-accent-dark transition-colors">Get a Free Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Upload House Plans -->
+  <section class="bg-white py-16 px-4 border-t border-gray-100">
+    <div class="max-w-site mx-auto grid grid-cols-2 gap-12 items-center">
+      <img src="../../../Architects-and-engineers-discussing-over-building-project-blueprint-in-meeting-room.avif" alt="Architects discussing house plans" class="w-full h-auto block rounded-3xl">
+      <div>
+        <h2 class="text-2xl font-semibold text-dark mb-4">Upload House Plans</h2>
+        <p class="text-sm font-light text-gray-600 leading-relaxed mb-6">Ready to start transforming your home with our window furnishings? Start by uploading your house plans, and an expert consultant will be in touch to guide you through the process. We'll provide an approximate price and get started on making your vision a reality.</p>
+        <button class="border border-dark text-dark text-xs font-semibold px-6 py-2.5 rounded-full hover:border-accent-dark hover:text-accent-dark transition-colors">Upload here</button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-gray-100 py-12 px-4">
+    <div class="max-w-site mx-auto grid grid-cols-5 gap-6">
+      <div class="col-span-1">
+        <div class="flex items-center mb-4"><div style="width:130px;height:34px;overflow:hidden;"><img src="../../../starlight logo website updated.png" alt="Starlight" style="height:90px;width:auto;max-width:none;margin-top:-24px;margin-left:-40px;"></div></div>
+        <span class="font-bold text-lg block mb-4" style="color:#1a1a1a; letter-spacing:-0.5px;">Starlight</span>
+        <div class="flex gap-2">
+          <div class="w-6 h-6 bg-gray-200 rounded-full"></div>
+          <div class="w-6 h-6 bg-gray-200 rounded-full"></div>
+          <div class="w-6 h-6 bg-gray-200 rounded-full"></div>
+          <div class="w-6 h-6 bg-gray-200 rounded-full"></div>
+        </div>
+      </div>
+      <div>
+        <h4 class="font-semibold text-xs text-dark mb-3">Contact</h4>
+        <p class="text-xs font-light text-accent-dark mb-1">Phone:</p>
+        <p class="text-xs font-light text-accent-dark mb-3">1300 000 000</p>
+        <p class="text-xs font-light text-accent-dark">Email us</p>
+        <p class="text-xs font-light text-accent-dark">info@starlightshades.com.au</p>
+      </div>
+      <div>
+        <h4 class="font-semibold text-xs text-dark mb-3">Information</h4>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-xs font-light text-gray-500 hover:text-accent-dark">Lifetime Guarantee</a></li>
+          <li><a href="#" class="text-xs font-light text-gray-500 hover:text-accent-dark">Child Safety</a></li>
+          <li><a href="#" class="text-xs font-light text-gray-500 hover:text-accent-dark">Work With Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold text-xs text-dark mb-3">Help</h4>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-xs font-light text-gray-500 hover:text-accent-dark">Tell the Boss</a></li>
+          <li><a href="#" class="text-xs font-light text-gray-500 hover:text-accent-dark">Care Instructions</a></li>
+          <li><a href="#" class="text-xs font-light text-gray-500 hover:text-accent-dark">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold text-xs text-dark mb-3">Policies</h4>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-xs font-light text-gray-500 hover:text-accent-dark">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Chat Button -->
+  <a href="contact.html" class="fixed bottom-6 right-6 bg-accent text-white text-xs font-semibold px-4 py-2.5 rounded-full shadow-lg flex items-center gap-2 hover:bg-accent-dark transition-colors z-50">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg>
+    Chat to an Expert
+  </a>
+
+<script>
+  document.querySelectorAll('.nav-dropdown').forEach(function(dropdown) {
+    var menu = dropdown.querySelector('.dropdown-menu');
+    var timeout;
+    dropdown.addEventListener('mouseenter', function() {
+      clearTimeout(timeout);
+      menu.style.display = 'block';
+    });
+    dropdown.addEventListener('mouseleave', function() {
+      timeout = setTimeout(function() { menu.style.display = 'none'; }, 150);
+    });
+    menu.addEventListener('mouseenter', function() { clearTimeout(timeout); });
+    menu.addEventListener('mouseleave', function() {
+      timeout = setTimeout(function() { menu.style.display = 'none'; }, 150);
+    });
+  });
+</script>
+</body>
+</html>
