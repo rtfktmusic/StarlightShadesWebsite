@@ -451,9 +451,8 @@
   var frames = [];
   var currentFrame = -1;
   var displayFrame = 0;
-  var locked = false;
-  var scrollBuffer = 0;
-  var SCROLL_PER_FRAME = 60;
+  var SCROLL_PER_FRAME = 50;
+  var TOUCH_PER_FRAME = 8;
 
   for (var i = 0; i < totalFrames; i++) {
     var img = new Image();
@@ -483,84 +482,71 @@
     var section = document.getElementById('blind-anim-section');
     var rect = section.getBoundingClientRect();
     var winH = window.innerHeight;
-    return rect.top < winH * 0.7 && rect.bottom > winH * 0.3;
+    return rect.top < winH * 0.8 && rect.bottom > winH * 0.2;
   }
 
-  function handleWheel(e) {
-    if (!isSectionInView()) { locked = false; return; }
-    var delta = e.deltaY;
-    var scrollingDown = delta > 0;
-    var scrollingUp = delta < 0;
+  function shouldLock(delta) {
+    if (!isSectionInView()) return false;
+    if (delta > 0 && displayFrame < totalFrames - 1) return true;
+    if (delta < 0 && displayFrame > 0) return true;
+    return false;
+  }
 
-    if (scrollingDown && displayFrame >= totalFrames - 1) { locked = false; return; }
-    if (scrollingUp && displayFrame <= 0) { locked = false; return; }
-
+  /* ---- Desktop wheel ---- */
+  var scrollBuffer = 0;
+  window.addEventListener('wheel', function(e) {
+    if (!shouldLock(e.deltaY)) { scrollBuffer = 0; return; }
     e.preventDefault();
-    locked = true;
-    scrollBuffer += delta;
-
-    var framesToAdvance = Math.floor(Math.abs(scrollBuffer) / SCROLL_PER_FRAME);
-    if (framesToAdvance > 0) {
+    scrollBuffer += e.deltaY;
+    var advance = Math.floor(Math.abs(scrollBuffer) / SCROLL_PER_FRAME);
+    if (advance > 0) {
+      var dir = scrollBuffer > 0 ? 1 : -1;
       scrollBuffer = 0;
-      for (var i = 0; i < framesToAdvance; i++) {
-        if (scrollingDown && displayFrame < totalFrames - 1) {
-          displayFrame++;
-        } else if (scrollingUp && displayFrame > 0) {
-          displayFrame--;
-        }
+      for (var i = 0; i < advance; i++) {
+        var next = displayFrame + dir;
+        if (next < 0 || next >= totalFrames) break;
+        displayFrame = next;
       }
       drawFrame(displayFrame);
     }
-  }
+  }, { passive: false });
 
-  var touchStartY = 0;
-  var touchLocked = false;
+  /* ---- Mobile touch ---- */
+  var lastTouchY = 0;
+  var touchActive = false;
 
-  function handleTouchStart(e) {
-    touchStartY = e.touches[0].clientY;
-    if (isSectionInView() && displayFrame > 0 && displayFrame < totalFrames - 1) {
-      touchLocked = true;
-      e.preventDefault();
-    } else if (isSectionInView()) {
-      touchLocked = true;
-    }
-  }
+  document.addEventListener('touchstart', function(e) {
+    lastTouchY = e.touches[0].clientY;
+    touchActive = isSectionInView();
+  }, { passive: true });
 
-  function handleTouchMove(e) {
-    if (!isSectionInView()) { touchLocked = false; return; }
+  document.addEventListener('touchmove', function(e) {
     var touchY = e.touches[0].clientY;
-    var delta = touchStartY - touchY;
-    var scrollingDown = delta > 0;
-    var scrollingUp = delta < 0;
+    var delta = lastTouchY - touchY;
 
-    if (scrollingDown && displayFrame >= totalFrames - 1) { touchLocked = false; return; }
-    if (scrollingUp && displayFrame <= 0) { touchLocked = false; return; }
+    if (touchActive && shouldLock(delta)) {
+      e.preventDefault();
+      lastTouchY = touchY;
 
-    e.preventDefault();
-    touchLocked = true;
-    touchStartY = touchY;
-
-    var framesToAdvance = Math.floor(Math.abs(delta) / 15);
-    if (framesToAdvance > 0) {
-      for (var i = 0; i < framesToAdvance; i++) {
-        if (scrollingDown && displayFrame < totalFrames - 1) {
-          displayFrame++;
-        } else if (scrollingUp && displayFrame > 0) {
-          displayFrame--;
+      var advance = Math.floor(Math.abs(delta) / TOUCH_PER_FRAME);
+      if (advance > 0) {
+        var dir = delta > 0 ? 1 : -1;
+        for (var i = 0; i < advance; i++) {
+          var next = displayFrame + dir;
+          if (next < 0 || next >= totalFrames) break;
+          displayFrame = next;
         }
+        drawFrame(displayFrame);
       }
-      drawFrame(displayFrame);
+    } else {
+      lastTouchY = touchY;
+      touchActive = isSectionInView();
     }
-  }
+  }, { passive: false });
 
-  function handleTouchEnd() {
-    touchLocked = false;
-  }
-
-  window.addEventListener('wheel', handleWheel, { passive: false });
-  document.addEventListener('touchstart', handleTouchStart, { passive: false });
-  document.addEventListener('touchmove', handleTouchMove, { passive: false });
-  document.addEventListener('touchend', handleTouchEnd, { passive: true });
+  document.addEventListener('touchend', function() {
+    touchActive = false;
+  }, { passive: true });
 })();
 </script>
 </body>
