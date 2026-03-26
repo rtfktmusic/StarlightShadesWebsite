@@ -86,6 +86,42 @@
       from { background-position: 50% 50%, 50% 50%; }
       to { background-position: 350% 50%, 350% 50%; }
     }
+
+    /* Mobile responsive */
+    @media (max-width: 768px) {
+      .mobile-cards {
+        grid-template-columns: 1fr !important;
+        height: auto !important;
+      }
+      .mobile-cards .exp-card {
+        min-height: 200px;
+      }
+      .mobile-cards .exp-rotated {
+        writing-mode: horizontal-tb !important;
+        text-orientation: initial !important;
+        font-size: 14px !important;
+        top: auto !important;
+        bottom: 16px !important;
+        left: 16px !important;
+      }
+      .mobile-cards .exp-content,
+      .mobile-cards .exp-split {
+        opacity: 1 !important;
+        pointer-events: auto !important;
+      }
+      .mobile-cards .exp-bg {
+        filter: grayscale(0) !important;
+        transform: scale(1) !important;
+      }
+      .visualiser-container .absolute.top-4.left-4 {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        width: 100% !important;
+        border-radius: 0 !important;
+        padding: 12px 16px !important;
+      }
+    }
   </style>
 </head>
 <body class="bg-white">
@@ -133,9 +169,59 @@
         <a href="automation.html" class="hover:text-accent-dark transition-colors">Automation</a>
       </div>
       <!-- CTA Button -->
-      <a href="contact.html" class="bg-accent text-white text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-accent-dark transition-colors whitespace-nowrap ml-4">Get a Free Quote</a>
+      <button onclick="toggleMobileMenu()" class="lg:hidden flex flex-col gap-1.5 p-2 ml-auto" aria-label="Menu">
+        <span class="block w-6 h-0.5 bg-dark"></span>
+        <span class="block w-6 h-0.5 bg-dark"></span>
+        <span class="block w-6 h-0.5 bg-dark"></span>
+      </button>
+      <a href="contact.html" class="hidden lg:inline-block bg-accent text-white text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-accent-dark transition-colors whitespace-nowrap ml-4">Get a Free Quote</a>
     </div>
   </nav>
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="fixed inset-0 bg-white z-[100] hidden flex-col overflow-y-auto lg:hidden">
+    <div class="flex items-center justify-between px-4 h-16 border-b border-gray-100">
+      <span class="font-bold text-lg text-dark">Menu</span>
+      <button onclick="toggleMobileMenu()" class="p-2" aria-label="Close menu">
+        <svg class="w-6 h-6 text-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="flex flex-col px-6 py-6 gap-4 text-base font-normal text-dark">
+      <a href="home.html" class="py-2 border-b border-gray-100 hover:text-accent-dark">Home</a>
+      <a href="about.html" class="py-2 border-b border-gray-100 hover:text-accent-dark">About</a>
+      <div class="py-2 border-b border-gray-100">
+        <button onclick="this.nextElementSibling.classList.toggle('hidden')" class="w-full flex items-center justify-between hover:text-accent-dark">Indoor Blinds <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></button>
+        <div class="hidden pl-4 pt-2 flex flex-col gap-2">
+          <a href="roller-blinds.html" class="text-sm text-gray-500 hover:text-accent-dark py-1">Roller Blinds</a>
+          <a href="vertical-blinds.html" class="text-sm text-gray-500 hover:text-accent-dark py-1">Vertical Blinds</a>
+          <a href="indoor-blinds-gallery.html" class="text-sm text-gray-500 hover:text-accent-dark py-1">Gallery</a>
+        </div>
+      </div>
+      <div class="py-2 border-b border-gray-100">
+        <button onclick="this.nextElementSibling.classList.toggle('hidden')" class="w-full flex items-center justify-between hover:text-accent-dark">Curtains <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></button>
+        <div class="hidden pl-4 pt-2 flex flex-col gap-2">
+          <a href="curtains.html" class="text-sm text-gray-500 hover:text-accent-dark py-1">Curtains</a>
+          <a href="curtains-gallery.html" class="text-sm text-gray-500 hover:text-accent-dark py-1">Gallery</a>
+        </div>
+      </div>
+      <div class="py-2 border-b border-gray-100">
+        <button onclick="this.nextElementSibling.classList.toggle('hidden')" class="w-full flex items-center justify-between hover:text-accent-dark">Shutters <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></button>
+        <div class="hidden pl-4 pt-2 flex flex-col gap-2">
+          <a href="plantation-shutters.html" class="text-sm text-gray-500 hover:text-accent-dark py-1">Plantation Shutters</a>
+          <a href="shutters-gallery.html" class="text-sm text-gray-500 hover:text-accent-dark py-1">Gallery</a>
+        </div>
+      </div>
+      <div class="py-2 border-b border-gray-100">
+        <button onclick="this.nextElementSibling.classList.toggle('hidden')" class="w-full flex items-center justify-between hover:text-accent-dark">Outdoor Blinds <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></button>
+        <div class="hidden pl-4 pt-2 flex flex-col gap-2">
+          <a href="awnings.html" class="text-sm text-gray-500 hover:text-accent-dark py-1">Awnings</a>
+          <a href="outdoor-blinds-gallery.html" class="text-sm text-gray-500 hover:text-accent-dark py-1">Gallery</a>
+        </div>
+      </div>
+      <a href="automation.html" class="py-2 border-b border-gray-100 hover:text-accent-dark">Automation</a>
+      <a href="contact.html" class="bg-accent text-white text-sm font-semibold px-5 py-3 rounded-full hover:bg-accent-dark transition-colors text-center mt-4">Get a Free Quote</a>
+    </div>
+  </div>
+
 
   <!-- Hero Video + Supplier Marquee -->
   <section class="relative w-full overflow-hidden" style="height: 85vh; min-height: 540px;">
@@ -289,7 +375,7 @@
 
   <!-- Expanding Product Cards -->
   <section class="w-full" style="padding:0;">
-    <ul id="exp-cards" style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr;height:960px;gap:8px;list-style:none;margin:0;padding:0;transition:grid-template-columns .5s ease-out;">
+    <ul id="exp-cards" style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr;height:960px;gap:8px;list-style:none;margin:0;padding:0;transition:grid-template-columns .5s ease-out;" class="mobile-cards">
 
       <!-- Card 1: Indoor Blinds (splits into Roller + Vertical on hover) -->
       <li class="exp-card" data-index="0" data-href="indoor-blinds.html" style="position:relative;overflow:hidden;border-radius:10px;cursor:pointer;min-width:80px;">
@@ -420,7 +506,7 @@
     <div class="max-w-site mx-auto text-center mb-10">
       <h2 class="text-accent-dark font-semibold text-2xl">Our Process</h2>
     </div>
-    <div class="max-w-site mx-auto grid grid-cols-3 gap-8 text-center">
+    <div class="max-w-site mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
       <div>
         <div class="w-16 h-16 rounded-full bg-accent mx-auto flex items-center justify-center mb-4">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
@@ -479,7 +565,7 @@
     <div class="max-w-site mx-auto text-center mb-10">
       <h2 class="text-dark font-semibold text-2xl">Don't Take Our Word For It, Read Our Reviews!</h2>
     </div>
-    <div class="max-w-site mx-auto grid grid-cols-3 gap-6">
+    <div class="max-w-site mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
       <div class="border border-gray-100 rounded-xl p-5 shadow-sm">
         <div class="flex text-accent-dark mb-3">★★★★★</div>
         <p class="text-xs font-light text-gray-500 leading-relaxed mb-3">"Absolutely love our new roller blinds. The team was professional from start to finish and the quality is amazing. Highly recommend Starlight Shades!"</p>
@@ -507,7 +593,7 @@
 
   <!-- Gallery Row -->
   <section class="max-w-site mx-auto px-4 py-12 relative z-10">
-    <div class="grid grid-cols-3 gap-4">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
       <img src="https://placehold.co/400x300/d4c8bc/888888?text=Installed+Blinds" alt="Gallery 1" class="w-full h-48 object-cover rounded-lg">
       <img src="https://placehold.co/400x300/ccc0b4/888888?text=Living+Room" alt="Gallery 2" class="w-full h-48 object-cover rounded-lg">
       <img src="https://placehold.co/400x300/d8cec4/888888?text=Bedroom+Shades" alt="Gallery 3" class="w-full h-48 object-cover rounded-lg">
@@ -516,9 +602,9 @@
 
   <!-- Footer -->
   <footer class="border-t border-gray-100 py-12 px-4 relative z-10">
-    <div class="max-w-site mx-auto grid grid-cols-5 gap-6">
+    <div class="max-w-site mx-auto grid grid-cols-2 md:grid-cols-5 gap-6 gap-y-8">
       <!-- Logo -->
-      <div class="col-span-1">
+      <div class="col-span-2 md:col-span-1">
         <div class="flex items-center mb-4"><div style="width:130px;height:34px;overflow:hidden;"><img src="../../../starlight logo website updated.png" alt="Starlight" style="height:90px;width:auto;max-width:none;margin-top:-24px;margin-left:-40px;"></div></div>
         <span class="font-bold text-lg block mb-4" style="color:#1a1a1a; letter-spacing:-0.5px;">Starlight</span>
         <div class="flex gap-2">
@@ -566,11 +652,67 @@
 
   </div><!-- /Aurora Bottom Section -->
 
-  <!-- Floating Chat Button -->
-  <a href="contact.html" class="fixed bottom-6 right-6 bg-accent text-white text-xs font-semibold px-4 py-2.5 rounded-full shadow-lg flex items-center gap-2 hover:bg-accent-dark transition-colors z-50">
-    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg>
-    Chat to an Expert
-  </a>
+  <!-- Floating Chat Widget -->
+  <div id="chat-widget" class="fixed bottom-6 right-6 z-50">
+    <!-- Chat Popup -->
+    <div id="chat-popup" class="hidden mb-3 w-80 bg-white rounded-2xl shadow-2xl overflow-hidden" style="box-shadow: 0 10px 40px rgba(0,0,0,0.15);">
+      <!-- Header -->
+      <div class="bg-gray-700 px-5 py-4 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center overflow-hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+          </div>
+          <div>
+            <p class="text-white font-semibold text-sm">Starlight Shades</p>
+            <p class="text-gray-300 text-xs">We'll reply as soon as we can</p>
+          </div>
+        </div>
+        <button onclick="toggleChat()" class="text-white hover:text-gray-300 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <!-- Message Bubble -->
+      <div class="px-5 py-4 bg-gray-50">
+        <div class="bg-white rounded-xl px-4 py-3 shadow-sm text-sm text-gray-600 leading-relaxed">
+          Please leave your contact info, suburb &amp; a message, and we will be in touch with you during office hours.
+        </div>
+      </div>
+      <!-- Form -->
+      <form action="https://formsubmit.co/info@starlightshades.au" method="POST" class="px-5 pb-5 space-y-3">
+        <input type="hidden" name="_subject" value="New Chat Widget Message - Starlight Shades">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="#">
+        <div>
+          <label class="block text-xs text-gray-500 mb-1">Name</label>
+          <input type="text" name="name" required class="w-full border-b border-gray-200 py-2 text-sm text-gray-800 focus:outline-none focus:border-accent placeholder-gray-300" placeholder="">
+        </div>
+        <div>
+          <label class="block text-xs text-gray-500 mb-1">Email</label>
+          <input type="email" name="email" required class="w-full border-b border-gray-200 py-2 text-sm text-gray-800 focus:outline-none focus:border-accent placeholder-gray-300" placeholder="">
+        </div>
+        <div>
+          <label class="block text-xs text-gray-500 mb-1">Phone</label>
+          <input type="tel" name="phone" class="w-full border-b border-gray-200 py-2 text-sm text-gray-800 focus:outline-none focus:border-accent placeholder-gray-300" placeholder="">
+        </div>
+        <div>
+          <label class="block text-xs text-gray-500 mb-1">Message</label>
+          <textarea name="message" required rows="2" class="w-full border-b border-gray-200 py-2 text-sm text-gray-800 focus:outline-none focus:border-accent placeholder-gray-300 resize-none" placeholder=""></textarea>
+        </div>
+        <button type="submit" class="w-full bg-gray-700 text-white text-sm font-semibold py-3 rounded-full hover:bg-gray-800 transition-colors">Submit</button>
+      </form>
+    </div>
+    <!-- Toggle Button -->
+    <button onclick="toggleChat()" id="chat-toggle-btn" class="ml-auto flex items-center gap-2 bg-accent text-white text-xs font-semibold px-4 py-2.5 rounded-full shadow-lg hover:bg-accent-dark transition-colors">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg>
+      Chat to an Expert
+    </button>
+  </div>
+  <script>
+    function toggleChat() {
+      var popup = document.getElementById('chat-popup');
+      popup.classList.toggle('hidden');
+    }
+  </script>
 
 <script>
   document.querySelectorAll('.nav-dropdown').forEach(function(dropdown) {
@@ -626,6 +768,21 @@
     }
     tick();
   })();
+</script>
+
+<script>
+  function toggleMobileMenu() {
+    var menu = document.getElementById('mobile-menu');
+    if (menu.classList.contains('hidden')) {
+      menu.classList.remove('hidden');
+      menu.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    } else {
+      menu.classList.add('hidden');
+      menu.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+  }
 </script>
 </body>
 </html>
