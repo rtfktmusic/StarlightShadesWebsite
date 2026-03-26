@@ -29,7 +29,7 @@
   <!-- Navigation -->
   <nav class="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
     <div class="max-w-site mx-auto px-4 flex items-center justify-between h-16">
-      <a href="home.html" style="display:block;width:150px;height:44px;overflow:hidden;flex-shrink:0;"><img src="../../../starlight logo website updated.png" alt="Starlight" style="height:120px;width:auto;max-width:none;margin-top:-40px;margin-left:-54px;"></a>
+      <a href="home.html" style="display:block;width:150px;height:44px;overflow:hidden;flex-shrink:0;"><img src="images/starlight logo website updated.png" alt="Starlight" style="height:120px;width:auto;max-width:none;margin-top:-40px;margin-left:-54px;"></a>
       <div class="hidden lg:flex items-center gap-5 text-sm font-normal text-dark">
         <a href="home.html" class="hover:text-accent-dark transition-colors">Home</a>
         <a href="about.html" class="hover:text-accent-dark transition-colors">About</a>
@@ -223,9 +223,6 @@
           <p class="text-xs font-light text-dark">PVC</p>
         </div>
       </div>
-      <div class="text-center mt-8">
-        <button class="border border-dark text-dark text-xs font-semibold px-8 py-2.5 rounded-full hover:border-accent-dark hover:text-accent-dark transition-colors">Explore our Full Range</button>
-      </div>
     </div>
   </section>
 
@@ -237,7 +234,7 @@
       <div class="max-w-site mx-auto">
         <h2 class="text-white text-3xl font-semibold mb-4">Expert In-Home Consultations</h2>
         <p class="text-sm font-light text-white/80 leading-relaxed mb-6 max-w-xl">Our in-home consultation service takes the hassle out of buying new shutters. We'll bring a range of samples to you so you can see how they look against your existing décor. Our expert advisors will provide bespoke advice and guidance, ensuring you make an informed decision you'll be happy with.</p>
-        <a href="#contact" class="inline-block bg-accent text-white text-xs font-semibold px-6 py-3 rounded-full hover:bg-accent-dark transition-colors">Get a Free Quote</a>
+        <a href="contact.html" class="inline-block bg-accent text-white text-xs font-semibold px-6 py-3 rounded-full hover:bg-accent-dark transition-colors">Get a Free Quote</a>
       </div>
     </div>
   </section>
@@ -245,7 +242,7 @@
   <!-- Upload House Plans -->
   <section class="bg-white py-16 px-4 border-t border-gray-100">
     <div class="max-w-site mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-      <img src="../../../Architects-and-engineers-discussing-over-building-project-blueprint-in-meeting-room.avif" alt="Architects discussing house plans" class="w-full h-auto block rounded-3xl">
+      <img src="images/Architects-and-engineers-discussing-over-building-project-blueprint-in-meeting-room.avif" alt="Architects discussing house plans" class="w-full h-auto block rounded-3xl">
       <div>
         <h2 class="text-2xl font-semibold text-dark mb-4">Upload House Plans</h2>
         <p class="text-sm font-light text-gray-600 leading-relaxed mb-6">Ready to start transforming your home with our window furnishings? Start by uploading your house plans, and an expert consultant will be in touch to guide you through the process. We'll provide an approximate price and get started on making your vision a reality.</p>
@@ -274,7 +271,7 @@
   <footer class="bg-white border-t border-gray-100 py-12 px-4">
     <div class="max-w-site mx-auto grid grid-cols-2 md:grid-cols-5 gap-6 gap-y-8">
       <div class="col-span-2 md:col-span-1">
-        <div class="flex items-center mb-4"><div style="width:130px;height:34px;overflow:hidden;"><img src="../../../starlight logo website updated.png" alt="Starlight" style="height:90px;width:auto;max-width:none;margin-top:-24px;margin-left:-40px;"></div></div>
+        <div class="flex items-center mb-4"><div style="width:130px;height:34px;overflow:hidden;"><img src="images/starlight logo website updated.png" alt="Starlight" style="height:90px;width:auto;max-width:none;margin-top:-24px;margin-left:-40px;"></div></div>
         <span class="font-bold text-lg block mb-4" style="color:#1a1a1a; letter-spacing:-0.5px;">Starlight</span>
         <div class="flex gap-2">
           <div class="w-6 h-6 bg-gray-200 rounded-full"></div>
@@ -337,7 +334,7 @@
       <!-- Message Bubble -->
       <div class="px-5 py-4 bg-gray-50">
         <div class="bg-white rounded-xl px-4 py-3 shadow-sm text-sm text-gray-600 leading-relaxed">
-          Please leave your contact info, suburb &amp; a message, and we will be in touch with you during office hours.
+          <span id="chat-greeting"></span>
         </div>
       </div>
       <!-- Form -->
@@ -371,6 +368,16 @@
     </button>
   </div>
   <script>
+    (function() {
+      var el = document.getElementById('chat-greeting');
+      if (!el) return;
+      var h = new Date().getHours();
+      if (h >= 9 && h < 18) {
+        el.textContent = 'Please leave your contact info, suburb & a message, and one of our members will be in touch with you shortly.';
+      } else {
+        el.textContent = 'Please leave your contact info, suburb & a message, and we will be in touch with you during office hours.';
+      }
+    })();
     function toggleChat() {
       var popup = document.getElementById('chat-popup');
       popup.classList.toggle('hidden');

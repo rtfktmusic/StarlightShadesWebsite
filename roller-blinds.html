@@ -29,7 +29,7 @@
   <!-- Navigation -->
   <nav class="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
     <div class="max-w-site mx-auto px-4 flex items-center justify-between h-16">
-      <a href="home.html" style="display:block;width:150px;height:44px;overflow:hidden;flex-shrink:0;"><img src="../../../starlight logo website updated.png" alt="Starlight" style="height:120px;width:auto;max-width:none;margin-top:-40px;margin-left:-54px;"></a>
+      <a href="home.html" style="display:block;width:150px;height:44px;overflow:hidden;flex-shrink:0;"><img src="images/starlight logo website updated.png" alt="Starlight" style="height:120px;width:auto;max-width:none;margin-top:-40px;margin-left:-54px;"></a>
       <div class="hidden lg:flex items-center gap-5 text-sm font-normal text-dark">
         <a href="home.html" class="hover:text-accent-dark transition-colors">Home</a>
         <a href="about.html" class="hover:text-accent-dark transition-colors">About</a>
@@ -128,112 +128,18 @@
   </div>
 
   <!-- Intro -->
-  <section class="py-14 px-4">
+  <section class="py-14 px-4" id="blind-anim-section">
     <div class="max-w-site mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
       <div>
         <h1 class="text-2xl font-semibold text-dark mb-4">Introducing Roller Blinds – the perfect solution for any space.</h1>
         <p class="text-sm font-light text-gray-600 leading-relaxed">Roller blinds come in a variety of fabrics and designs, tailored to match any décor. They provide complete light control and privacy while enhancing the look of the space. Easy to use and maintain, roller blinds are a stylish, practical addition to any home or office.</p>
       </div>
-      <div class="overflow-hidden rounded-2xl" style="max-height:420px;">
-        <img src=".claude/Starlightphotos/Roller%20Blind%20Photos/IMG_6749.png" alt="Roller Blinds Lifestyle" class="w-full h-full object-cover">
+      <div class="overflow-hidden rounded-2xl" id="blind-scroll-container" style="min-height:420px;">
+        <canvas id="blind-canvas" style="width:120%;display:block;border-radius:1rem;margin-left:-10%;"></canvas>
       </div>
     </div>
   </section>
 
-  <!-- Fabric Visualiser -->
-  <section class="px-4 pb-10">
-    <div class="max-w-site mx-auto">
-      <div class="visualiser-container relative w-full overflow-hidden rounded-2xl" style="padding-bottom:67.75%;background:#1a1a1a;">
-        <!-- Room image -->
-        <div id="vis-image" class="absolute inset-0 bg-cover bg-center" style="background-image:url('https://placehold.co/1200x800/d0c8c0/666?text=Indoor+Day+Screens+Light');transition:background-image 0.4s ease;"></div>
-
-        <!-- Left control panel -->
-        <div class="absolute top-4 left-4 rounded-xl p-5 text-white z-10" style="width:210px;background:rgba(0,0,0,0.65);backdrop-filter:blur(8px);">
-          <h3 class="font-semibold text-xs mb-2 tracking-wide">Fabric Style</h3>
-          <label class="flex items-center gap-2 cursor-pointer mb-1.5">
-            <input type="radio" name="vis-style" value="screens" checked class="vis-radio accent-white w-3 h-3">
-            <span class="text-xs font-light">Screens</span>
-          </label>
-          <label class="flex items-center gap-2 cursor-pointer mb-1.5">
-            <input type="radio" name="vis-style" value="blockout" class="vis-radio accent-white w-3 h-3">
-            <span class="text-xs font-light">Blockout</span>
-          </label>
-          <label class="flex items-center gap-2 cursor-pointer mb-3">
-            <input type="radio" name="vis-style" value="lightfiltering" class="vis-radio accent-white w-3 h-3">
-            <span class="text-xs font-light">Light Filtering</span>
-          </label>
-
-          <h3 class="font-semibold text-xs mb-2 tracking-wide">Fabric Tone</h3>
-          <div class="flex gap-3">
-            <button class="vis-tone-btn" data-tone="light" style="width:48px;height:36px;background:#c8c8c8;border-radius:6px;border:2px solid #fff;transition:border-color .2s;"></button>
-            <button class="vis-tone-btn" data-tone="medium" style="width:48px;height:36px;background:#888;border-radius:6px;border:2px solid transparent;transition:border-color .2s;"></button>
-            <button class="vis-tone-btn" data-tone="dark" style="width:48px;height:36px;background:#3a3a3a;border-radius:6px;border:2px solid transparent;transition:border-color .2s;"></button>
-          </div>
-          <div class="flex gap-3 mt-1">
-            <span class="text-center text-xs font-light" style="width:48px;">Light</span>
-            <span class="text-center text-xs font-light" style="width:48px;">Medium</span>
-            <span class="text-center text-xs font-light" style="width:48px;">Dark</span>
-          </div>
-        </div>
-
-        <!-- Bottom toggle bar -->
-        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-3 z-10">
-          <div class="flex rounded-full overflow-hidden" style="background:rgba(0,0,0,0.5);backdrop-filter:blur(8px);">
-            <button class="vis-scene-btn px-4 py-1.5 text-xs font-semibold transition-colors" data-scene="indoor" style="background:#fff;color:#1a1a1a;border-radius:999px;">Indoor</button>
-            <button class="vis-scene-btn px-4 py-1.5 text-xs font-semibold transition-colors" data-scene="outdoor" style="background:transparent;color:#fff;border-radius:999px;">Outdoor</button>
-          </div>
-          <div class="flex rounded-full overflow-hidden" style="background:rgba(0,0,0,0.5);backdrop-filter:blur(8px);">
-            <button class="vis-time-btn px-4 py-1.5 text-xs font-semibold transition-colors" data-time="day" style="background:#fff;color:#1a1a1a;border-radius:999px;">Day</button>
-            <button class="vis-time-btn px-4 py-1.5 text-xs font-semibold transition-colors" data-time="night" style="background:transparent;color:#fff;border-radius:999px;">Night</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <script>
-  (function(){
-    var scene='indoor', time='day', style='screens', tone='light';
-    var img = document.getElementById('vis-image');
-    var section = img.closest('.max-w-site');
-
-    function update(){
-      var url='https://placehold.co/1200x800/d0c8c0/666?text='+scene+'+'+time+'+'+style+'+'+tone;
-      img.style.backgroundImage='url('+url+')';
-    }
-
-    section.querySelectorAll('input[name="vis-style"]').forEach(function(r){
-      r.addEventListener('change',function(){ style=this.value; update(); });
-    });
-
-    section.querySelectorAll('.vis-tone-btn').forEach(function(b){
-      b.addEventListener('click',function(){
-        tone=this.dataset.tone;
-        section.querySelectorAll('.vis-tone-btn').forEach(function(x){ x.style.borderColor='transparent'; });
-        this.style.borderColor='#fff';
-        update();
-      });
-    });
-
-    section.querySelectorAll('.vis-scene-btn').forEach(function(b){
-      b.addEventListener('click',function(){
-        scene=this.dataset.scene;
-        section.querySelectorAll('.vis-scene-btn').forEach(function(x){ x.style.background='transparent'; x.style.color='#fff'; });
-        this.style.background='#fff'; this.style.color='#1a1a1a';
-        update();
-      });
-    });
-
-    section.querySelectorAll('.vis-time-btn').forEach(function(b){
-      b.addEventListener('click',function(){
-        time=this.dataset.time;
-        section.querySelectorAll('.vis-time-btn').forEach(function(x){ x.style.background='transparent'; x.style.color='#fff'; });
-        this.style.background='#fff'; this.style.color='#1a1a1a';
-        update();
-      });
-    });
-  })();
-  </script>
 
   <!-- Why Choose -->
   <section class="py-16 px-4 bg-gray-50">
@@ -319,9 +225,6 @@
           <p class="text-xs font-light text-dark">Lightfilter</p>
         </div>
       </div>
-      <div class="text-center mt-8">
-        <button class="border border-dark text-dark text-xs font-semibold px-8 py-2.5 rounded-full hover:border-accent-dark hover:text-accent-dark transition-colors">Explore our Full Range</button>
-      </div>
     </div>
   </section>
 
@@ -357,7 +260,7 @@
       <div class="max-w-site mx-auto">
         <h2 class="text-white text-3xl font-semibold mb-4">Expert In-Home Consultations</h2>
         <p class="text-sm font-light text-white/80 leading-relaxed mb-6 max-w-xl">Our in-home consultation service takes the hassle out of buying new blinds. We'll bring a range of fabric samples to you so you can see how they look against your existing décor. Our expert advisors will provide bespoke advice and guidance, ensuring you make an informed decision you'll be happy with.</p>
-        <a href="#contact" class="inline-block bg-accent text-white text-xs font-semibold px-6 py-3 rounded-full hover:bg-accent-dark transition-colors">Get a Free Quote</a>
+        <a href="contact.html" class="inline-block bg-accent text-white text-xs font-semibold px-6 py-3 rounded-full hover:bg-accent-dark transition-colors">Get a Free Quote</a>
       </div>
     </div>
   </section>
@@ -365,7 +268,7 @@
   <!-- Upload House Plans -->
   <section class="bg-white py-16 px-4 border-t border-gray-100">
     <div class="max-w-site mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-      <img src="../../../Architects-and-engineers-discussing-over-building-project-blueprint-in-meeting-room.avif" alt="Architects discussing house plans" class="w-full h-auto block rounded-3xl">
+      <img src="images/Architects-and-engineers-discussing-over-building-project-blueprint-in-meeting-room.avif" alt="Architects discussing house plans" class="w-full h-auto block rounded-3xl">
       <div>
         <h2 class="text-2xl font-semibold text-dark mb-4">Upload House Plans</h2>
         <p class="text-sm font-light text-gray-600 leading-relaxed mb-6">Ready to start transforming your home with our window furnishings? Start by uploading your house plans, and an expert consultant will be in touch to guide you through the process. We'll provide an approximate price and get started on making your vision a reality.</p>
@@ -394,7 +297,7 @@
   <footer class="bg-white border-t border-gray-100 py-12 px-4">
     <div class="max-w-site mx-auto grid grid-cols-2 md:grid-cols-5 gap-6 gap-y-8">
       <div class="col-span-2 md:col-span-1">
-        <div class="flex items-center mb-4"><div style="width:130px;height:34px;overflow:hidden;"><img src="../../../starlight logo website updated.png" alt="Starlight" style="height:90px;width:auto;max-width:none;margin-top:-24px;margin-left:-40px;"></div></div>
+        <div class="flex items-center mb-4"><div style="width:130px;height:34px;overflow:hidden;"><img src="images/starlight logo website updated.png" alt="Starlight" style="height:90px;width:auto;max-width:none;margin-top:-24px;margin-left:-40px;"></div></div>
         <span class="font-bold text-lg block mb-4" style="color:#1a1a1a; letter-spacing:-0.5px;">Starlight</span>
         <div class="flex gap-2">
           <div class="w-6 h-6 bg-gray-200 rounded-full"></div>
@@ -457,7 +360,7 @@
       <!-- Message Bubble -->
       <div class="px-5 py-4 bg-gray-50">
         <div class="bg-white rounded-xl px-4 py-3 shadow-sm text-sm text-gray-600 leading-relaxed">
-          Please leave your contact info, suburb &amp; a message, and we will be in touch with you during office hours.
+          <span id="chat-greeting"></span>
         </div>
       </div>
       <!-- Form -->
@@ -491,6 +394,16 @@
     </button>
   </div>
   <script>
+    (function() {
+      var el = document.getElementById('chat-greeting');
+      if (!el) return;
+      var h = new Date().getHours();
+      if (h >= 9 && h < 18) {
+        el.textContent = 'Please leave your contact info, suburb & a message, and one of our members will be in touch with you shortly.';
+      } else {
+        el.textContent = 'Please leave your contact info, suburb & a message, and we will be in touch with you during office hours.';
+      }
+    })();
     function toggleChat() {
       var popup = document.getElementById('chat-popup');
       popup.classList.toggle('hidden');
@@ -528,6 +441,113 @@
       document.body.style.overflow = '';
     }
   }
+</script>
+<script>
+(function() {
+  var canvas = document.getElementById('blind-canvas');
+  var ctx = canvas.getContext('2d');
+  var totalFrames = 16;
+  var frames = [];
+  var currentFrame = -1;
+  var displayFrame = 0;
+  var locked = false;
+  var scrollBuffer = 0;
+  var SCROLL_PER_FRAME = 60;
+
+  for (var i = 0; i < totalFrames; i++) {
+    var img = new Image();
+    img.src = 'images/roller-blind-frames/frame-' + String(i).padStart(3, '0') + '.gif';
+    (function(idx, image) {
+      image.onload = function() {
+        if (idx === 0) {
+          canvas.width = image.naturalWidth;
+          canvas.height = image.naturalHeight;
+          drawFrame(0);
+        }
+      };
+    })(i, img);
+    frames.push(img);
+  }
+
+  function drawFrame(index) {
+    if (index === currentFrame) return;
+    if (index < 0 || index >= totalFrames) return;
+    if (!frames[index] || !frames[index].complete) return;
+    currentFrame = index;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(frames[index], 0, 0, canvas.width, canvas.height);
+  }
+
+  function isSectionInView() {
+    var section = document.getElementById('blind-anim-section');
+    var rect = section.getBoundingClientRect();
+    var winH = window.innerHeight;
+    return rect.top < winH * 0.7 && rect.bottom > winH * 0.3;
+  }
+
+  function handleWheel(e) {
+    if (!isSectionInView()) { locked = false; return; }
+    var delta = e.deltaY;
+    var scrollingDown = delta > 0;
+    var scrollingUp = delta < 0;
+
+    if (scrollingDown && displayFrame >= totalFrames - 1) { locked = false; return; }
+    if (scrollingUp && displayFrame <= 0) { locked = false; return; }
+
+    e.preventDefault();
+    locked = true;
+    scrollBuffer += delta;
+
+    var framesToAdvance = Math.floor(Math.abs(scrollBuffer) / SCROLL_PER_FRAME);
+    if (framesToAdvance > 0) {
+      scrollBuffer = 0;
+      for (var i = 0; i < framesToAdvance; i++) {
+        if (scrollingDown && displayFrame < totalFrames - 1) {
+          displayFrame++;
+        } else if (scrollingUp && displayFrame > 0) {
+          displayFrame--;
+        }
+      }
+      drawFrame(displayFrame);
+    }
+  }
+
+  var touchStartY = 0;
+  function handleTouchStart(e) {
+    touchStartY = e.touches[0].clientY;
+  }
+
+  function handleTouchMove(e) {
+    if (!isSectionInView()) { locked = false; return; }
+    var touchY = e.touches[0].clientY;
+    var delta = touchStartY - touchY;
+    var scrollingDown = delta > 0;
+    var scrollingUp = delta < 0;
+
+    if (scrollingDown && displayFrame >= totalFrames - 1) { locked = false; return; }
+    if (scrollingUp && displayFrame <= 0) { locked = false; return; }
+
+    e.preventDefault();
+    locked = true;
+    touchStartY = touchY;
+
+    var framesToAdvance = Math.floor(Math.abs(delta) / 20);
+    if (framesToAdvance > 0) {
+      for (var i = 0; i < framesToAdvance; i++) {
+        if (scrollingDown && displayFrame < totalFrames - 1) {
+          displayFrame++;
+        } else if (scrollingUp && displayFrame > 0) {
+          displayFrame--;
+        }
+      }
+      drawFrame(displayFrame);
+    }
+  }
+
+  window.addEventListener('wheel', handleWheel, { passive: false });
+  window.addEventListener('touchstart', handleTouchStart, { passive: true });
+  window.addEventListener('touchmove', handleTouchMove, { passive: false });
+})();
 </script>
 </body>
 </html>

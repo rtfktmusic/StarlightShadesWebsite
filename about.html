@@ -86,7 +86,7 @@
   <!-- Navigation -->
   <nav class="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
     <div class="max-w-site mx-auto px-4 flex items-center justify-between h-16">
-      <a href="home.html" style="display:block;width:150px;height:44px;overflow:hidden;flex-shrink:0;"><img src="../../../starlight logo website updated.png" alt="Starlight" style="height:120px;width:auto;max-width:none;margin-top:-40px;margin-left:-54px;"></a>
+      <a href="home.html" style="display:block;width:150px;height:44px;overflow:hidden;flex-shrink:0;"><img src="images/starlight logo website updated.png" alt="Starlight" style="height:120px;width:auto;max-width:none;margin-top:-40px;margin-left:-54px;"></a>
       <div class="hidden lg:flex items-center gap-5 text-sm font-normal text-dark">
         <a href="home.html" class="hover:text-accent-dark transition-colors">Home</a>
         <a href="about.html" class="text-accent-dark font-semibold">About</a>
@@ -192,7 +192,7 @@
     <div class="relative flex flex-col items-center justify-center px-4" style="animation: fadeSlideUp 0.8s ease-out 0.3s both;">
       <h1 class="text-4xl md:text-6xl font-bold text-slate-900 text-center mb-4">About Starlight Shades</h1>
       <p class="font-light text-base md:text-xl text-slate-600 text-center max-w-2xl mb-8">Over 20 years of expertise in crafting beautiful window covering solutions for your home.</p>
-      <a href="#contact" class="bg-dark text-white rounded-full px-6 py-2.5 text-sm font-semibold hover:bg-accent-dark transition-colors">Get a Free Quote</a>
+      <a href="contact.html" class="bg-dark text-white rounded-full px-6 py-2.5 text-sm font-semibold hover:bg-accent-dark transition-colors">Get a Free Quote</a>
     </div>
   </section>
 
@@ -201,7 +201,7 @@
     <div class="max-w-2xl mx-auto text-center text-sm font-light leading-relaxed text-dark space-y-3">
       <p>Discover the expertise of Starlight Shades, with over 20 years of experience in providing you with the best window covering solutions.</p>
       <p>Our team of professionals offers personalised design consultations right at your doorstep, ensuring that you find the perfect fit for your windows. Choose from a wide range of options including Curtains, Venetians, Roller Blinds, Roman Blinds, Plantation Shutters, and more.</p>
-      <p>Rest assured, our commitment to superior customer service and quality is unmatched.<br>Contact us today or request a free in-home measure &amp; consultation <a href="#contact" class="text-accent-dark hover:underline">here</a>.</p>
+      <p>Rest assured, our commitment to superior customer service and quality is unmatched.<br>Contact us today or request a free in-home measure &amp; consultation <a href="contact.html" class="text-accent-dark hover:underline">here</a>.</p>
       <p>Trust in Starlight Shades, a proud member of the Window Shading Association of Australia.</p>
     </div>
   </section>
@@ -223,7 +223,7 @@
         <img src=".claude/Starlightphotos/Our%20Process/Consultation%20Call.jpg" alt="Request a Consultation" class="w-full h-56 object-cover rounded-2xl">
         <div>
           <h3 class="font-semibold text-base mb-1">Request a Consultation</h3>
-          <p class="text-xs font-light text-gray-500 leading-relaxed">Start the process by calling our office on <a href="tel:1300000000" class="text-accent-dark">1300 000 000</a> or submit a request <a href="#contact" class="text-accent-dark">here</a></p>
+          <p class="text-xs font-light text-gray-500 leading-relaxed">Start the process by calling our office on <a href="tel:1300000000" class="text-accent-dark">1300 000 000</a> or submit a request <a href="contact.html" class="text-accent-dark">here</a></p>
         </div>
       </div>
 
@@ -263,7 +263,7 @@
     <div class="absolute inset-0 bg-dark/70 flex flex-col items-center justify-center text-center px-4">
       <h2 class="text-white font-semibold text-3xl mb-2">Create your dream space</h2>
       <p class="text-white/80 text-sm font-light mb-6">Tell us about your project today</p>
-      <a href="#contact" class="bg-white text-dark font-semibold text-sm px-8 py-3 rounded-full hover:bg-gray-100 transition-colors">Get a Free Quote</a>
+      <a href="contact.html" class="bg-white text-dark font-semibold text-sm px-8 py-3 rounded-full hover:bg-gray-100 transition-colors">Get a Free Quote</a>
     </div>
   </section>
 
@@ -271,7 +271,7 @@
   <footer class="relative z-10 bg-white/90 backdrop-blur-sm border-t border-gray-100 py-12 px-4">
     <div class="max-w-site mx-auto grid grid-cols-2 md:grid-cols-5 gap-6 gap-y-8">
       <div class="col-span-2 md:col-span-1">
-        <div class="flex items-center mb-4"><div style="width:130px;height:34px;overflow:hidden;"><img src="../../../starlight logo website updated.png" alt="Starlight" style="height:90px;width:auto;max-width:none;margin-top:-24px;margin-left:-40px;"></div></div>
+        <div class="flex items-center mb-4"><div style="width:130px;height:34px;overflow:hidden;"><img src="images/starlight logo website updated.png" alt="Starlight" style="height:90px;width:auto;max-width:none;margin-top:-24px;margin-left:-40px;"></div></div>
         <span class="font-bold text-lg block mb-4" style="color:#1a1a1a; letter-spacing:-0.5px;">Starlight</span>
         <div class="flex gap-2">
           <div class="w-6 h-6 bg-gray-200 rounded-full"></div>
@@ -334,7 +334,7 @@
       <!-- Message Bubble -->
       <div class="px-5 py-4 bg-gray-50">
         <div class="bg-white rounded-xl px-4 py-3 shadow-sm text-sm text-gray-600 leading-relaxed">
-          Please leave your contact info, suburb &amp; a message, and we will be in touch with you during office hours.
+          <span id="chat-greeting"></span>
         </div>
       </div>
       <!-- Form -->
@@ -368,6 +368,16 @@
     </button>
   </div>
   <script>
+    (function() {
+      var el = document.getElementById('chat-greeting');
+      if (!el) return;
+      var h = new Date().getHours();
+      if (h >= 9 && h < 18) {
+        el.textContent = 'Please leave your contact info, suburb & a message, and one of our members will be in touch with you shortly.';
+      } else {
+        el.textContent = 'Please leave your contact info, suburb & a message, and we will be in touch with you during office hours.';
+      }
+    })();
     function toggleChat() {
       var popup = document.getElementById('chat-popup');
       popup.classList.toggle('hidden');
