@@ -514,25 +514,33 @@
   }
 
   var touchStartY = 0;
+  var touchLocked = false;
+
   function handleTouchStart(e) {
     touchStartY = e.touches[0].clientY;
+    if (isSectionInView() && displayFrame > 0 && displayFrame < totalFrames - 1) {
+      touchLocked = true;
+      e.preventDefault();
+    } else if (isSectionInView()) {
+      touchLocked = true;
+    }
   }
 
   function handleTouchMove(e) {
-    if (!isSectionInView()) { locked = false; return; }
+    if (!isSectionInView()) { touchLocked = false; return; }
     var touchY = e.touches[0].clientY;
     var delta = touchStartY - touchY;
     var scrollingDown = delta > 0;
     var scrollingUp = delta < 0;
 
-    if (scrollingDown && displayFrame >= totalFrames - 1) { locked = false; return; }
-    if (scrollingUp && displayFrame <= 0) { locked = false; return; }
+    if (scrollingDown && displayFrame >= totalFrames - 1) { touchLocked = false; return; }
+    if (scrollingUp && displayFrame <= 0) { touchLocked = false; return; }
 
     e.preventDefault();
-    locked = true;
+    touchLocked = true;
     touchStartY = touchY;
 
-    var framesToAdvance = Math.floor(Math.abs(delta) / 20);
+    var framesToAdvance = Math.floor(Math.abs(delta) / 15);
     if (framesToAdvance > 0) {
       for (var i = 0; i < framesToAdvance; i++) {
         if (scrollingDown && displayFrame < totalFrames - 1) {
@@ -545,9 +553,14 @@
     }
   }
 
+  function handleTouchEnd() {
+    touchLocked = false;
+  }
+
   window.addEventListener('wheel', handleWheel, { passive: false });
-  window.addEventListener('touchstart', handleTouchStart, { passive: true });
-  window.addEventListener('touchmove', handleTouchMove, { passive: false });
+  document.addEventListener('touchstart', handleTouchStart, { passive: false });
+  document.addEventListener('touchmove', handleTouchMove, { passive: false });
+  document.addEventListener('touchend', handleTouchEnd, { passive: true });
 })();
 </script>
 </body>
