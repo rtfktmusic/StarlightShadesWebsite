@@ -154,11 +154,43 @@
   </div>
 
 
-  <!-- Gallery -->
-  <div class="relative flex min-h-screen w-full flex-col items-center justify-center py-10 px-4">
-    <h1 class="text-2xl font-semibold text-dark mb-8">Indoor Blinds Gallery</h1>
+  <!-- Panel Selector -->
+  <section class="w-full" style="padding:0;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;height:500px;gap:4px;">
+      <!-- Roller Blinds Panel -->
+      <a href="#roller-gallery" class="gallery-panel" style="position:relative;overflow:hidden;border-radius:10px;display:block;text-decoration:none;cursor:pointer;">
+        <img src="images/Roller%20Blind%20Photos/jpegmini_optimized/Light%20filter.jpg" alt="Roller Blinds" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s ease-out,filter .4s ease-out;transform:scale(1.05);filter:grayscale(0.5);">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.75) 0%,rgba(0,0,0,.25) 50%,transparent 100%);"></div>
+        <div style="position:absolute;bottom:24px;left:24px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="white" stroke-width="1.5" viewBox="0 0 24 24" style="margin-bottom:8px;"><rect x="3" y="3" width="18" height="3" rx="1"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="13" x2="21" y2="13"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
+          <h2 style="color:white;font-size:22px;font-weight:700;margin:0 0 4px;">Roller Blinds</h2>
+          <p style="color:rgba(255,255,255,.75);font-size:13px;margin:0;">Light control & style for every room.</p>
+        </div>
+      </a>
+      <!-- Vertical Blinds Panel -->
+      <a href="#vertical-gallery" class="gallery-panel" style="position:relative;overflow:hidden;border-radius:10px;display:block;text-decoration:none;cursor:pointer;">
+        <img src="images/Vertical%20blind/Vertical.jpg" alt="Vertical Blinds" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s ease-out,filter .4s ease-out;transform:scale(1.05);filter:grayscale(0.5);">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.75) 0%,rgba(0,0,0,.25) 50%,transparent 100%);"></div>
+        <div style="position:absolute;bottom:24px;left:24px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="white" stroke-width="1.5" viewBox="0 0 24 24" style="margin-bottom:8px;"><line x1="5" y1="3" x2="5" y2="21"/><line x1="10" y1="3" x2="10" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/><line x1="20" y1="3" x2="20" y2="21"/></svg>
+          <h2 style="color:white;font-size:22px;font-weight:700;margin:0 0 4px;">Vertical Blinds</h2>
+          <p style="color:rgba(255,255,255,.75);font-size:13px;margin:0;">Floor-to-ceiling coverage & elegance.</p>
+        </div>
+      </a>
+    </div>
+  </section>
+  <style>
+    html { scroll-behavior: smooth; }
+    .gallery-panel:hover img { transform: scale(1); filter: grayscale(0); }
+    @media (max-width: 640px) {
+      .gallery-panel { min-height: 250px; }
+    }
+  </style>
+
+  <!-- Roller Blinds Gallery -->
+  <div id="roller-gallery" class="relative flex w-full flex-col items-center py-10 px-4" style="scroll-margin-top:64px;">
+    <h2 class="text-2xl font-semibold text-dark mb-8">Roller Blinds</h2>
     <div class="mx-auto grid w-full max-w-5xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      <!-- Column 1 -->
       <div class="grid gap-6">
         <div class="gallery-img relative rounded-lg border overflow-hidden" style="aspect-ratio:9/16;">
           <img src="images/Roller%20Blind%20Photos/jpegmini_optimized/Light%20filter.jpg" alt="Light filter roller blind" class="w-full h-full object-cover" loading="lazy" onclick="openLightbox(this)">
@@ -173,7 +205,6 @@
           <img src="images/Roller%20Blind%20Photos/jpegmini_optimized/IMG_6199.jpg" alt="Roller blind" class="w-full h-full object-cover" loading="lazy" onclick="openLightbox(this)">
         </div>
       </div>
-      <!-- Column 2 -->
       <div class="grid gap-6">
         <div class="gallery-img relative rounded-lg border overflow-hidden" style="aspect-ratio:16/9;">
           <img src="images/Roller%20Blind%20Photos/Roller%20blinds.jpg" alt="Roller blinds" class="w-full h-full object-cover" loading="lazy" onclick="openLightbox(this)">
@@ -188,7 +219,6 @@
           <img src="images/Roller%20Blind%20Photos/IMG_5262.png" alt="Roller blind" class="w-full h-full object-cover" loading="lazy" onclick="openLightbox(this)">
         </div>
       </div>
-      <!-- Column 3 -->
       <div class="grid gap-6">
         <div class="gallery-img relative rounded-lg border overflow-hidden" style="aspect-ratio:9/16;">
           <img src="images/Roller%20Blind%20Photos/jpegmini_optimized/IMG_5252.jpg" alt="Roller blind" class="w-full h-full object-cover" loading="lazy" onclick="openLightbox(this)">
@@ -204,6 +234,43 @@
         </div>
         <div class="gallery-img relative rounded-lg border overflow-hidden" style="aspect-ratio:16/9;">
           <img src="images/Roller%20Blind%20Photos/IMG_6901.png" alt="Roller blind" class="w-full h-full object-cover" loading="lazy" onclick="openLightbox(this)">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Vertical Blinds Gallery -->
+  <div id="vertical-gallery" class="relative flex w-full flex-col items-center py-10 px-4" style="scroll-margin-top:64px;">
+    <h2 class="text-2xl font-semibold text-dark mb-8">Vertical Blinds</h2>
+    <div class="mx-auto grid w-full max-w-5xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="grid gap-6">
+        <div class="gallery-img rounded-lg border overflow-hidden">
+          <img src="images/Vertical%20blind/Dining.jpg" alt="Vertical blinds dining room" class="w-full h-auto object-cover" loading="lazy" onclick="openLightbox(this)">
+        </div>
+        <div class="gallery-img rounded-lg border overflow-hidden">
+          <img src="images/Vertical%20blind/Vertical.jpg" alt="Vertical blinds" class="w-full h-auto object-cover" loading="lazy" onclick="openLightbox(this)">
+        </div>
+        <div class="gallery-img rounded-lg border overflow-hidden">
+          <img src="images/Vertical%20blind/Vertical%20fabric.jpg" alt="Vertical blind fabric" class="w-full h-auto object-cover" loading="lazy" onclick="openLightbox(this)">
+        </div>
+      </div>
+      <div class="grid gap-6">
+        <div class="gallery-img rounded-lg border overflow-hidden">
+          <img src="images/Vertical%20blind/Vert.jpg" alt="Vertical blinds" class="w-full h-auto object-cover" loading="lazy" onclick="openLightbox(this)">
+        </div>
+        <div class="gallery-img rounded-lg border overflow-hidden">
+          <img src="images/Vertical%20blind/Office%20Vertical%20blinds.jpg" alt="Office vertical blinds" class="w-full h-auto object-cover" loading="lazy" onclick="openLightbox(this)">
+        </div>
+        <div class="gallery-img rounded-lg border overflow-hidden">
+          <img src="images/Vertical%20blind/Vertical%20living.jpg" alt="Vertical blinds living room" class="w-full h-auto object-cover" loading="lazy" onclick="openLightbox(this)">
+        </div>
+      </div>
+      <div class="grid gap-6">
+        <div class="gallery-img rounded-lg border overflow-hidden">
+          <img src="images/Vertical%20blind/Vertical%20B.jpg" alt="Vertical blinds" class="w-full h-auto object-cover" loading="lazy" onclick="openLightbox(this)">
+        </div>
+        <div class="gallery-img rounded-lg border overflow-hidden">
+          <img src="images/Vertical%20blind/Store%20trap%C3%A8ze.jpg" alt="Vertical blinds trapeze" class="w-full h-auto object-cover" loading="lazy" onclick="openLightbox(this)">
         </div>
       </div>
     </div>
@@ -259,78 +326,6 @@
     </div>
   </footer>
 
-  <!-- Floating Chat Widget -->
-  <div id="chat-widget" class="fixed bottom-6 right-6 z-50">
-    <!-- Chat Popup -->
-    <div id="chat-popup" class="hidden mb-3 w-80 bg-white rounded-2xl shadow-2xl overflow-hidden" style="box-shadow: 0 10px 40px rgba(0,0,0,0.15);">
-      <!-- Header -->
-      <div class="bg-gray-700 px-5 py-4 flex items-center justify-between">
-        <div class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center overflow-hidden">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
-          </div>
-          <div>
-            <p class="text-white font-semibold text-sm">Starlight Shades</p>
-            <p class="text-gray-300 text-xs">We'll reply as soon as we can</p>
-          </div>
-        </div>
-        <button onclick="toggleChat()" class="text-white hover:text-gray-300 transition-colors">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-        </button>
-      </div>
-      <!-- Message Bubble -->
-      <div class="px-5 py-4 bg-gray-50">
-        <div class="bg-white rounded-xl px-4 py-3 shadow-sm text-sm text-gray-600 leading-relaxed">
-          <span id="chat-greeting"></span>
-        </div>
-      </div>
-      <!-- Form -->
-      <form action="https://formsubmit.co/info@starlightshades.au" method="POST" class="px-5 pb-5 space-y-3">
-        <input type="hidden" name="_subject" value="New Chat Widget Message - Starlight Shades">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="#">
-        <div>
-          <label class="block text-xs text-gray-500 mb-1">Name</label>
-          <input type="text" name="name" required class="w-full border-b border-gray-200 py-2 text-sm text-gray-800 focus:outline-none focus:border-accent placeholder-gray-300" placeholder="">
-        </div>
-        <div>
-          <label class="block text-xs text-gray-500 mb-1">Email</label>
-          <input type="email" name="email" required class="w-full border-b border-gray-200 py-2 text-sm text-gray-800 focus:outline-none focus:border-accent placeholder-gray-300" placeholder="">
-        </div>
-        <div>
-          <label class="block text-xs text-gray-500 mb-1">Phone</label>
-          <input type="tel" name="phone" class="w-full border-b border-gray-200 py-2 text-sm text-gray-800 focus:outline-none focus:border-accent placeholder-gray-300" placeholder="">
-        </div>
-        <div>
-          <label class="block text-xs text-gray-500 mb-1">Message</label>
-          <textarea name="message" required rows="2" class="w-full border-b border-gray-200 py-2 text-sm text-gray-800 focus:outline-none focus:border-accent placeholder-gray-300 resize-none" placeholder=""></textarea>
-        </div>
-        <button type="submit" class="w-full bg-gray-700 text-white text-sm font-semibold py-3 rounded-full hover:bg-gray-800 transition-colors">Submit</button>
-      </form>
-    </div>
-    <!-- Toggle Button -->
-    <button onclick="toggleChat()" id="chat-toggle-btn" class="ml-auto flex items-center gap-2 bg-accent text-white text-xs font-semibold px-4 py-2.5 rounded-full shadow-lg hover:bg-accent-dark transition-colors">
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg>
-      Chat to an Expert
-    </button>
-  </div>
-  <script>
-    (function() {
-      var el = document.getElementById('chat-greeting');
-      if (!el) return;
-      var h = new Date().getHours();
-      if (h >= 9 && h < 18) {
-        el.textContent = 'Please leave your contact info, suburb & a message, and one of our members will be in touch with you shortly.';
-      } else {
-        el.textContent = 'Please leave your contact info, suburb & a message, and we will be in touch with you during office hours.';
-      }
-    })();
-    function toggleChat() {
-      var popup = document.getElementById('chat-popup');
-      popup.classList.toggle('hidden');
-    }
-  </script>
-
 <script>
   // Dropdown nav
   document.querySelectorAll('.nav-dropdown').forEach(function(dropdown) {
@@ -378,5 +373,18 @@
     }
   }
 </script>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/69c87c5af6bc571c38b76658/1jkribgn7';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
 </body>
 </html>

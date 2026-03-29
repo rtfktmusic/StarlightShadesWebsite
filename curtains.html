@@ -307,78 +307,6 @@
     </div>
   </footer>
 
-  <!-- Floating Chat Widget -->
-  <div id="chat-widget" class="fixed bottom-6 right-6 z-50">
-    <!-- Chat Popup -->
-    <div id="chat-popup" class="hidden mb-3 w-80 bg-white rounded-2xl shadow-2xl overflow-hidden" style="box-shadow: 0 10px 40px rgba(0,0,0,0.15);">
-      <!-- Header -->
-      <div class="bg-gray-700 px-5 py-4 flex items-center justify-between">
-        <div class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center overflow-hidden">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
-          </div>
-          <div>
-            <p class="text-white font-semibold text-sm">Starlight Shades</p>
-            <p class="text-gray-300 text-xs">We'll reply as soon as we can</p>
-          </div>
-        </div>
-        <button onclick="toggleChat()" class="text-white hover:text-gray-300 transition-colors">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-        </button>
-      </div>
-      <!-- Message Bubble -->
-      <div class="px-5 py-4 bg-gray-50">
-        <div class="bg-white rounded-xl px-4 py-3 shadow-sm text-sm text-gray-600 leading-relaxed">
-          <span id="chat-greeting"></span>
-        </div>
-      </div>
-      <!-- Form -->
-      <form action="https://formsubmit.co/info@starlightshades.au" method="POST" class="px-5 pb-5 space-y-3">
-        <input type="hidden" name="_subject" value="New Chat Widget Message - Starlight Shades">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="#">
-        <div>
-          <label class="block text-xs text-gray-500 mb-1">Name</label>
-          <input type="text" name="name" required class="w-full border-b border-gray-200 py-2 text-sm text-gray-800 focus:outline-none focus:border-accent placeholder-gray-300" placeholder="">
-        </div>
-        <div>
-          <label class="block text-xs text-gray-500 mb-1">Email</label>
-          <input type="email" name="email" required class="w-full border-b border-gray-200 py-2 text-sm text-gray-800 focus:outline-none focus:border-accent placeholder-gray-300" placeholder="">
-        </div>
-        <div>
-          <label class="block text-xs text-gray-500 mb-1">Phone</label>
-          <input type="tel" name="phone" class="w-full border-b border-gray-200 py-2 text-sm text-gray-800 focus:outline-none focus:border-accent placeholder-gray-300" placeholder="">
-        </div>
-        <div>
-          <label class="block text-xs text-gray-500 mb-1">Message</label>
-          <textarea name="message" required rows="2" class="w-full border-b border-gray-200 py-2 text-sm text-gray-800 focus:outline-none focus:border-accent placeholder-gray-300 resize-none" placeholder=""></textarea>
-        </div>
-        <button type="submit" class="w-full bg-gray-700 text-white text-sm font-semibold py-3 rounded-full hover:bg-gray-800 transition-colors">Submit</button>
-      </form>
-    </div>
-    <!-- Toggle Button -->
-    <button onclick="toggleChat()" id="chat-toggle-btn" class="ml-auto flex items-center gap-2 bg-accent text-white text-xs font-semibold px-4 py-2.5 rounded-full shadow-lg hover:bg-accent-dark transition-colors">
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg>
-      Chat to an Expert
-    </button>
-  </div>
-  <script>
-    (function() {
-      var el = document.getElementById('chat-greeting');
-      if (!el) return;
-      var h = new Date().getHours();
-      if (h >= 9 && h < 18) {
-        el.textContent = 'Please leave your contact info, suburb & a message, and one of our members will be in touch with you shortly.';
-      } else {
-        el.textContent = 'Please leave your contact info, suburb & a message, and we will be in touch with you during office hours.';
-      }
-    })();
-    function toggleChat() {
-      var popup = document.getElementById('chat-popup');
-      popup.classList.toggle('hidden');
-    }
-  </script>
-
 <script>
   document.querySelectorAll('.nav-dropdown').forEach(function(dropdown) {
     var menu = dropdown.querySelector('.dropdown-menu');
@@ -411,5 +339,18 @@
     }
   }
 </script>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/69c87c5af6bc571c38b76658/1jkribgn7';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
 </body>
 </html>
