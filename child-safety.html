@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Child Safety – Starlight Shades</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            accent: '#FBC4A1',
+            'accent-dark': '#FF9B60',
+            'accent-deeper': '#e8894a',
+            dark: '#3B3D40',
+          },
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif'],
+          },
+          maxWidth: {
+            site: '980px',
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Poppins', sans-serif; color: #3B3D40; }
+    .dropdown-menu { display: none; position: absolute; }
+  </style>
+</head>
+<body class="bg-white">
+
+  <!-- Navigation -->
+  <nav class="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
+    <div class="max-w-site mx-auto px-4 flex items-center justify-between h-16">
+      <a href="home.html" style="display:block;width:150px;height:44px;overflow:hidden;flex-shrink:0;"><img src="images/starlight logo website updated.png" alt="Starlight" style="height:120px;width:auto;max-width:none;margin-top:-40px;margin-left:-54px;"></a>
+      <div class="hidden lg:flex items-center gap-5 text-sm font-normal text-dark">
+        <a href="home.html" class="hover:text-accent-dark transition-colors">Home</a>
+        <div class="relative nav-dropdown"><button class="hover:text-accent-dark transition-colors flex items-center gap-1">About <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></button><div class="dropdown-menu absolute top-full left-0 bg-white shadow-lg rounded mt-1 py-1 w-40 z-50"><a href="about.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">About Us</a><a href="contact.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Contact Us</a></div></div>
+        <div class="relative nav-dropdown">
+          <button class="hover:text-accent-dark transition-colors flex items-center gap-1 whitespace-nowrap">Indoor Blinds <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></button>
+          <div class="dropdown-menu absolute top-full left-0 bg-white shadow-lg rounded mt-1 py-1 w-40 z-50">
+            <a href="roller-blinds.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Roller Blinds</a>
+            <a href="vertical-blinds.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Vertical Blinds</a>
+            <a href="indoor-blinds-gallery.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Gallery</a>
+          </div>
+        </div>
+        <div class="relative nav-dropdown">
+          <button class="hover:text-accent-dark transition-colors flex items-center gap-1">Curtains <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></button>
+          <div class="dropdown-menu absolute top-full left-0 bg-white shadow-lg rounded mt-1 py-1 w-40 z-50">
+            <a href="curtains.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Curtains</a>
+            <a href="curtains-gallery.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Gallery</a>
+          </div>
+        </div>
+        <div class="relative nav-dropdown">
+          <button class="hover:text-accent-dark transition-colors flex items-center gap-1">Shutters <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></button>
+          <div class="dropdown-menu absolute top-full left-0 bg-white shadow-lg rounded mt-1 py-1 w-44 z-50">
+            <a href="plantation-shutters.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Plantation Shutters</a>
+            <a href="shutters-gallery.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Gallery</a>
+          </div>
+        </div>
+        <div class="relative nav-dropdown">
+          <button class="hover:text-accent-dark transition-colors flex items-center gap-1 whitespace-nowrap">Outdoor Blinds <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></button>
+          <div class="dropdown-menu top-full left-0 bg-white shadow-lg rounded mt-1 py-1 w-36 z-50">
+            <a href="awnings.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Awnings</a>
+            <a href="outdoor-blinds-gallery.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Gallery</a>
+          </div>
+        </div>
+        <a href="automation.html" class="hover:text-accent-dark transition-colors">Automation</a>
+      </div>
+      <button onclick="toggleMobileMenu()" class="lg:hidden flex flex-col gap-1.5 p-2 ml-auto" aria-label="Menu">
+        <span class="block w-6 h-0.5 bg-dark"></span>
+        <span class="block w-6 h-0.5 bg-dark"></span>
+        <span class="block w-6 h-0.5 bg-dark"></span>
+      </button>
+      <a href="contact.html" class="hidden lg:inline-block bg-accent text-white text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-accent-dark transition-colors whitespace-nowrap ml-4">Get a Free Quote</a>
+    </div>
+  </nav>
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="fixed inset-0 bg-white z-[100] hidden flex-col overflow-y-auto lg:hidden">
+    <div class="flex items-center justify-between px-4 h-16 border-b border-gray-100">
+      <span class="font-bold text-lg text-dark">Menu</span>
+      <button onclick="toggleMobileMenu()" class="p-2" aria-label="Close menu">
+        <svg class="w-6 h-6 text-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="flex flex-col px-6 py-6 gap-4 text-base font-normal text-dark">
+      <a href="home.html" class="py-2 border-b border-gray-100 hover:text-accent-dark">Home</a>
+      <div class="py-2 border-b border-gray-100"><button onclick="this.nextElementSibling.classList.toggle('hidden')" class="w-full flex items-center justify-between hover:text-accent-dark">About <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></button><div class="hidden pl-4 pt-2 flex flex-col gap-2"><a href="about.html" class="text-sm text-gray-500 hover:text-accent-dark py-1">About Us</a><a href="contact.html" class="text-sm text-gray-500 hover:text-accent-dark py-1">Contact Us</a></div></div>
+      <div class="py-2 border-b border-gray-100">
+        <button onclick="this.nextElementSibling.classList.toggle('hidden')" class="w-full flex items-center justify-between hover:text-accent-dark">Indoor Blinds <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></button>
+        <div class="hidden pl-4 pt-2 flex flex-col gap-2">
+          <a href="roller-blinds.html" class="text-sm text-gray-500 hover:text-accent-dark py-1">Roller Blinds</a>
+          <a href="vertical-blinds.html" class="text-sm text-gray-500 hover:text-accent-dark py-1">Vertical Blinds</a>
+          <a href="indoor-blinds-gallery.html" class="text-sm text-gray-500 hover:text-accent-dark py-1">Gallery</a>
+        </div>
+      </div>
+      <div class="py-2 border-b border-gray-100">
+        <button onclick="this.nextElementSibling.classList.toggle('hidden')" class="w-full flex items-center justify-between hover:text-accent-dark">Curtains <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></button>
+        <div class="hidden pl-4 pt-2 flex flex-col gap-2">
+          <a href="curtains.html" class="text-sm text-gray-500 hover:text-accent-dark py-1">Curtains</a>
+          <a href="curtains-gallery.html" class="text-sm text-gray-500 hover:text-accent-dark py-1">Gallery</a>
+        </div>
+      </div>
+      <div class="py-2 border-b border-gray-100">
+        <button onclick="this.nextElementSibling.classList.toggle('hidden')" class="w-full flex items-center justify-between hover:text-accent-dark">Shutters <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></button>
+        <div class="hidden pl-4 pt-2 flex flex-col gap-2">
+          <a href="plantation-shutters.html" class="text-sm text-gray-500 hover:text-accent-dark py-1">Plantation Shutters</a>
+          <a href="shutters-gallery.html" class="text-sm text-gray-500 hover:text-accent-dark py-1">Gallery</a>
+        </div>
+      </div>
+      <div class="py-2 border-b border-gray-100">
+        <button onclick="this.nextElementSibling.classList.toggle('hidden')" class="w-full flex items-center justify-between hover:text-accent-dark">Outdoor Blinds <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></button>
+        <div class="hidden pl-4 pt-2 flex flex-col gap-2">
+          <a href="awnings.html" class="text-sm text-gray-500 hover:text-accent-dark py-1">Awnings</a>
+          <a href="outdoor-blinds-gallery.html" class="text-sm text-gray-500 hover:text-accent-dark py-1">Gallery</a>
+        </div>
+      </div>
+      <a href="automation.html" class="py-2 border-b border-gray-100 hover:text-accent-dark">Automation</a>
+      <a href="contact.html" class="bg-accent text-white text-sm font-semibold px-5 py-3 rounded-full hover:bg-accent-dark transition-colors text-center mt-4">Get a Free Quote</a>
+    </div>
+  </div>
+
+  <!-- Hero Banner with Photo -->
+  <section class="relative w-full overflow-hidden" style="height: 400px;">
+    <img src="images/child-safety-hero.jpg" alt="Child Safety" class="absolute inset-0 w-full h-full object-cover">
+    <div class="absolute inset-0 bg-black/30"></div>
+    <div class="absolute inset-0 flex items-center justify-center">
+      <div class="bg-accent/90 px-10 py-4 rounded-lg">
+        <h1 class="text-white font-bold text-3xl md:text-4xl tracking-tight">Child Safety</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- Title Section -->
+  <section class="max-w-site mx-auto px-4 pt-12 pb-6 text-center">
+    <h2 class="text-dark font-semibold text-xl md:text-2xl mb-2">Child Safety &amp; Blind Cord Safety Information</h2>
+    <p class="text-dark font-semibold text-sm md:text-base mt-4">All installations by Starlight Shades are in accordance with Australian standards</p>
+  </section>
+
+  <!-- Safety Content -->
+  <section class="max-w-site mx-auto px-4 pb-12">
+    <div class="text-gray-600 text-sm font-light leading-relaxed space-y-4">
+      <p>Window coverings with cords, chains, or loops can pose a serious strangulation risk to young children. At Starlight Shades, the safety of your family is our highest priority. We take every precaution to ensure our products meet or exceed Australian safety standards, and we're committed to helping you make informed choices about the window furnishings in your home.</p>
+
+      <p>ACCC Product Safety Australia recommends the following guidelines for keeping your home safe:</p>
+
+      <ul class="list-disc pl-6 space-y-3">
+        <li>Walk through every room in your home and check for any blinds or curtains with long cords that are within reach of children. Pay special attention to bedrooms, playrooms, and living areas where young children spend most of their time.</li>
+        <li>Never place cots, beds, highchairs, or playpens near windows where children could reach blind cords or chains. Even short cords can become dangerous if a child climbs nearby furniture to access them.</li>
+        <li>Choose cordless blind options wherever possible — including spring-loaded rollers, motorised blinds, or wand-operated vertical blinds. These designs eliminate exposed cords entirely and are the safest choice for homes with children.</li>
+        <li>If your existing blinds have cords, ensure they are fitted with cord cleats or cord tensioners. These devices secure loose cords to the wall, keeping them taut and out of reach of little hands.</li>
+        <li>Always supervise children in rooms with corded window coverings. Even with safety devices installed, supervision remains the most effective way to prevent accidents.</li>
+      </ul>
+
+      <p>From 1 January 2015, a new national mandatory standard applies to the installation of internal blinds, curtains, and window fittings across Australia. This standard requires all corded products to include safety devices that restrict access to cords.</p>
+
+      <p>A small adhesive label (30mm x 30mm) with the installation company's details is to be placed on or adjacent to a mounting bracket at the top of the blind, curtain, or window covering. Additionally, a safety warning sticker and cord safety clip are included with every corded product we install. Your installer will show you the location of these labels and safety clips, and explain how to use them properly.</p>
+
+      <p class="text-xs text-gray-400 mt-6">For more information, visit the <a href="https://www.productsafety.gov.au" target="_blank" class="text-accent-dark hover:underline">ACCC Product Safety Australia</a> website or refer to the <a href="#" class="text-accent-dark hover:underline">AS/NZS 13120 Cord Safety Standard</a>.</p>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="bg-accent py-16 px-4 text-center">
+    <h2 class="text-white font-semibold text-2xl mb-2">Create your dream space</h2>
+    <p class="text-white/90 text-sm font-light mb-6">Tell us about your project today</p>
+    <a href="contact.html" class="bg-white text-accent-dark font-semibold text-sm px-8 py-3 rounded-full hover:bg-gray-50 transition-colors inline-block">Get a Free Quote</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-gray-100 py-12 px-4">
+    <div class="max-w-site mx-auto grid grid-cols-1 md:grid-cols-4 gap-6 gap-y-8">
+      <div>
+        <div class="flex items-center mb-4"><div style="width:200px;height:52px;overflow:hidden;"><img src="images/starlight logo website updated.png" alt="Starlight Shades" style="height:140px;width:auto;max-width:none;margin-top:-38px;margin-left:-54px;"></div></div>
+      </div>
+      <div>
+        <h4 class="font-semibold text-xs text-dark mb-3">Contact</h4>
+        <p class="text-xs font-light text-accent-dark mb-1">Phone:</p>
+        <p class="text-xs font-light text-accent-dark mb-3">0450 466 664</p>
+        <p class="text-xs font-light text-accent-dark">Email us</p>
+        <p class="text-xs font-light text-accent-dark">info@starlightshades.au</p>
+      </div>
+      <div>
+        <h4 class="font-semibold text-xs text-dark mb-3">Information</h4>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-xs font-light text-gray-500 hover:text-accent-dark">Lifetime Guarantee</a></li>
+          <li><a href="child-safety.html" class="text-xs font-light text-gray-500 hover:text-accent-dark">Child Safety</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold text-xs text-dark mb-3">Help</h4>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-xs font-light text-gray-500 hover:text-accent-dark">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  document.querySelectorAll('.nav-dropdown').forEach(function(dropdown) {
+    var menu = dropdown.querySelector('.dropdown-menu');
+    var timeout;
+    dropdown.addEventListener('mouseenter', function() {
+      clearTimeout(timeout);
+      menu.style.display = 'block';
+    });
+    dropdown.addEventListener('mouseleave', function() {
+      timeout = setTimeout(function() { menu.style.display = 'none'; }, 150);
+    });
+    menu.addEventListener('mouseenter', function() { clearTimeout(timeout); });
+    menu.addEventListener('mouseleave', function() {
+      timeout = setTimeout(function() { menu.style.display = 'none'; }, 150);
+    });
+  });
+</script>
+
+<script>
+  function toggleMobileMenu() {
+    var menu = document.getElementById('mobile-menu');
+    if (menu.classList.contains('hidden')) {
+      menu.classList.remove('hidden');
+      menu.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    } else {
+      menu.classList.add('hidden');
+      menu.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+  }
+</script>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/69c87c5af6bc571c38b76658/1jkribgn7';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+</body>
+</html>
