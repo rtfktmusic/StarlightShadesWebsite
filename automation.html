@@ -5,8 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home Automation – Starlight Shades</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>.nav-logo{transform:translateX(-21px);}.footer-logo{transform:translateX(-27px);}@media(min-width:1024px){.nav-logo{transform:translateX(-40px);}.footer-logo{transform:translateX(-40px);}}</style>
   <script>
     tailwind.config = {
       theme: {
@@ -20,7 +21,7 @@
   </script>
   <style>
     body { font-family: 'Poppins', sans-serif; color: #3B3D40; }
-    .dropdown-menu { display: none; position: absolute; }
+    .dropdown-menu { display: none; position: absolute; } .nav-dropdown:hover .dropdown-menu { display: block; }
     .pop-hover { transition: transform 0.3s ease; }
     .pop-hover:hover { transform: scale(1.05); }
   </style>
@@ -30,13 +31,13 @@
   <!-- Navigation -->
   <nav class="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
     <div class="max-w-site mx-auto px-4 flex items-center justify-between h-16">
-      <a href="home.html" style="display:block;width:150px;height:44px;overflow:hidden;flex-shrink:0;"><img src="images/starlight logo website updated.png" alt="Starlight" style="height:120px;width:auto;max-width:none;margin-top:-40px;margin-left:-54px;"></a>
+      <a href="home.html" class="nav-logo" style="display:flex;align-items:center;flex-shrink:0;text-decoration:none;margin-right:12px;margin-left:0px;"><div style="width:150px;height:44px;overflow:hidden;flex-shrink:0;"><img src="images/starlight logo website updated.png" alt="Starlight" style="height:120px;width:auto;max-width:none;margin-top:-40px;margin-left:-62px;"></div><span style="font-family:Manrope,sans-serif;font-size:25px;font-weight:800;color:#000000;margin-left:-14px;-webkit-text-stroke:0.85px #000000;line-height:1;margin-top:-6px;">Shades</span></a>
       <div class="hidden lg:flex items-center gap-5 text-sm font-normal text-dark">
         <a href="home.html" class="hover:text-accent-dark transition-colors">Home</a>
-        <div class="relative nav-dropdown"><button class="hover:text-accent-dark transition-colors flex items-center gap-1">About <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></button><div class="dropdown-menu absolute top-full left-0 bg-white shadow-lg rounded mt-1 py-1 w-40 z-50"><a href="about.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">About Us</a><a href="contact.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Contact Us</a></div></div>
+        <div class="relative nav-dropdown"><button class="hover:text-accent-dark transition-colors flex items-center gap-1">About <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></button><div class="dropdown-menu absolute top-full left-0 bg-white shadow-lg rounded py-1 w-40 z-50"><a href="about.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">About Us</a><a href="contact.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Contact Us</a></div></div>
         <div class="relative nav-dropdown">
           <button class="hover:text-accent-dark transition-colors flex items-center gap-1 whitespace-nowrap">Indoor Blinds <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></button>
-          <div class="dropdown-menu absolute top-full left-0 bg-white shadow-lg rounded mt-1 py-1 w-40 z-50">
+          <div class="dropdown-menu absolute top-full left-0 bg-white shadow-lg rounded py-1 w-40 z-50">
             <a href="roller-blinds.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Roller Blinds</a>
             <a href="vertical-blinds.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Vertical Blinds</a>
             <a href="indoor-blinds-gallery.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Gallery</a>
@@ -44,21 +45,21 @@
         </div>
         <div class="relative nav-dropdown">
           <button class="hover:text-accent-dark transition-colors flex items-center gap-1">Curtains <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></button>
-          <div class="dropdown-menu absolute top-full left-0 bg-white shadow-lg rounded mt-1 py-1 w-40 z-50">
+          <div class="dropdown-menu absolute top-full left-0 bg-white shadow-lg rounded py-1 w-40 z-50">
             <a href="curtains.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Curtains</a>
             <a href="curtains-gallery.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Gallery</a>
           </div>
         </div>
         <div class="relative nav-dropdown">
           <button class="hover:text-accent-dark transition-colors flex items-center gap-1">Shutters <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></button>
-          <div class="dropdown-menu absolute top-full left-0 bg-white shadow-lg rounded mt-1 py-1 w-44 z-50">
+          <div class="dropdown-menu absolute top-full left-0 bg-white shadow-lg rounded py-1 w-44 z-50">
             <a href="plantation-shutters.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Plantation Shutters</a>
             <a href="shutters-gallery.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Gallery</a>
           </div>
         </div>
         <div class="relative nav-dropdown">
           <button class="hover:text-accent-dark transition-colors flex items-center gap-1 whitespace-nowrap">Outdoor Blinds <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></button>
-          <div class="dropdown-menu top-full left-0 bg-white shadow-lg rounded mt-1 py-1 w-36 z-50">
+          <div class="dropdown-menu absolute top-full left-0 bg-white shadow-lg rounded py-2 w-36 z-50">
             <a href="awnings.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Awnings</a>
             <a href="outdoor-blinds-gallery.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Gallery</a>
           </div>
@@ -120,8 +121,8 @@
 
 
   <!-- Hero -->
-  <div class="relative w-full h-80 overflow-hidden">
-    <img src="https://placehold.co/1200x420/c0bcb8/888888?text=Automation" alt="Automation" class="w-full h-full object-cover">
+  <div class="relative w-full overflow-hidden" style="height:520px;">
+    <img src="images/automation-header.jpg" alt="Automation" class="absolute inset-0 w-full h-full object-cover" style="object-position:center 15%;">
     <div class="absolute inset-0 bg-black/40"></div>
     <div class="absolute bottom-6 right-6">
       <span class="bg-accent/90 text-white font-semibold text-2xl px-10 py-4 rounded-xl">Automation</span>
@@ -136,9 +137,9 @@
     </div>
   </section>
 
-  <!-- Lifestyle Image -->
-  <div class="max-w-site mx-auto px-4 mb-12">
-    <img src="https://placehold.co/980x320/c0bcb8/888888?text=Home+Automation+Lifestyle" alt="Home Automation Lifestyle" class="w-full h-80 object-cover rounded-xl">
+  <!-- Automation Video -->
+  <div class="max-w-7xl mx-auto px-4 mb-12">
+    <video src="images/motionblinds-connectivity-trimmed.mp4" autoplay muted loop playsinline class="w-full rounded-xl"></video>
   </div>
 
   <!-- Why Choose -->
@@ -185,19 +186,19 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div>
           <p class="text-xs font-semibold text-dark uppercase tracking-wide mb-3">Product Type</p>
-          <img src="https://placehold.co/320x220/c8c4c0/999999?text=Product+Type" alt="Product Type" class="w-full h-48 object-cover rounded-xl mb-3 pop-hover">
+          <img src="images/Roller%20Blind%20Photos/jpegmini_optimized/IMG_5252.jpg" alt="Product Type" class="w-full h-72 object-cover rounded-xl mb-3 pop-hover">
           <p class="text-xs font-light text-gray-600">Motorisation is available across our full range including roller blinds, curtains, vertical blinds, plantation shutters, and awnings.</p>
           <p class="text-xs font-light text-gray-500 mt-1">Retrofit options available for existing window coverings.</p>
         </div>
         <div>
           <p class="text-xs font-semibold text-dark uppercase tracking-wide mb-3">Battery vs Hardwired</p>
-          <img src="https://placehold.co/320x220/c8c4c0/999999?text=Battery+vs+Hardwired" alt="Battery vs Hardwired" class="w-full h-48 object-cover rounded-xl mb-3 pop-hover">
+          <img src="images/Discover%20your%20choices/battery-or-hardwired.jpg" alt="Battery vs Hardwired" class="w-full h-72 object-cover rounded-xl mb-3 pop-hover">
           <p class="text-xs font-light text-gray-600">Choose between rechargeable battery-powered motors for easy installation, or hardwired systems for a completely wireless and permanent solution.</p>
           <p class="text-xs font-light text-gray-500 mt-1">Solar charging options also available.</p>
         </div>
         <div>
           <p class="text-xs font-semibold text-dark uppercase tracking-wide mb-3">Control</p>
-          <img src="https://placehold.co/320x220/c8c4c0/999999?text=Control+Options" alt="Control" class="w-full h-48 object-cover rounded-xl mb-3 pop-hover">
+          <img src="images/Discover%20your%20choices/Control.webp" alt="Control" class="w-full h-72 object-cover rounded-xl mb-3 pop-hover">
           <p class="text-xs font-light text-gray-600">Operate via wall switch, remote control, smartphone app, or voice command. Group control allows you to manage multiple blinds simultaneously.</p>
           <p class="text-xs font-light text-gray-500 mt-1">Timer and sun-tracking scheduling available.</p>
         </div>
@@ -210,23 +211,17 @@
     <div class="max-w-site mx-auto">
       <h2 class="text-accent-dark text-2xl font-semibold mb-2 text-center">Smart Home Integration</h2>
       <p class="text-sm font-light text-gray-500 text-center mb-8 max-w-xl mx-auto">Our motorised systems are compatible with the world's leading smart home platforms, making integration into your existing setup effortless.</p>
-      <div class="flex justify-center gap-10 mb-12">
+      <div class="flex justify-center gap-14 mb-12">
         <div class="text-center">
-          <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-2">
-            <span class="text-xs font-light text-gray-500">HomeKit</span>
-          </div>
+          <svg class="w-14 h-14 mx-auto mb-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.5 12c0 4.14-3.36 7.5-7.5 7.5S4.5 16.14 4.5 12 7.86 4.5 12 4.5s7.5 3.36 7.5 7.5z" stroke="#555" stroke-width="1.2"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2" stroke="#555" stroke-width="1.2" stroke-linecap="round"/><path d="M8 12a4 4 0 014-4" stroke="#555" stroke-width="1.2" stroke-linecap="round"/><path d="M12 8l1.2-1.2M12 8l-1.2-1.2" stroke="#555" stroke-width="1" stroke-linecap="round"/></svg>
           <p class="text-xs font-light text-dark">Apple HomeKit</p>
         </div>
         <div class="text-center">
-          <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-2">
-            <span class="text-xs font-light text-gray-500">Alexa</span>
-          </div>
+          <svg class="w-14 h-14 mx-auto mb-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="19" r="3" fill="#31C4F3"/><path d="M12 16V4" stroke="#31C4F3" stroke-width="2" stroke-linecap="round"/><path d="M7.5 7.5C9 6 10.5 5.5 12 5.5s3 .5 4.5 2" stroke="#31C4F3" stroke-width="1.5" stroke-linecap="round"/><path d="M5 5c2.5-2.5 4.5-3 7-3s4.5.5 7 3" stroke="#31C4F3" stroke-width="1.5" stroke-linecap="round"/></svg>
           <p class="text-xs font-light text-dark">Amazon Alexa</p>
         </div>
         <div class="text-center">
-          <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-2">
-            <span class="text-xs font-light text-gray-500">Google</span>
-          </div>
+          <svg class="w-14 h-14 mx-auto mb-2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="3.5" fill="#FBBC04"/><circle cx="12" cy="12" r="3.5" fill="none" stroke="#EA4335" stroke-width="0"/><path d="M12 2a10 10 0 00-10 10h4a6 6 0 016-6V2z" fill="#EA4335"/><path d="M22 12a10 10 0 00-10-10v4a6 6 0 016 6h4z" fill="#4285F4"/><path d="M12 22a10 10 0 0010-10h-4a6 6 0 01-6 6v4z" fill="#34A853"/><path d="M2 12a10 10 0 0010 10v-4a6 6 0 01-6-6H2z" fill="#FBBC04"/></svg>
           <p class="text-xs font-light text-dark">Google Home</p>
         </div>
       </div>
@@ -234,25 +229,13 @@
       <!-- Stay Sustainable -->
       <div class="max-w-site mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          <img src="https://placehold.co/460x280/d4d0cc/aaaaaa?text=Stay+Sustainable" alt="Stay Sustainable" class="w-full h-56 object-cover rounded-xl">
+          <img src="images/solar-sustainable.jpg" alt="Stay Sustainable" class="w-full h-80 object-cover rounded-xl">
           <div>
             <h3 class="text-xl font-semibold text-dark mb-3">Stay Sustainable</h3>
             <p class="text-sm font-light text-gray-600 leading-relaxed mb-3">Our automated blinds play a significant role in reducing your home's energy consumption. By intelligently managing sunlight and heat gain, they help maintain a comfortable indoor temperature naturally, reducing the load on your heating and cooling systems.</p>
             <p class="text-xs font-light text-gray-500 leading-relaxed">Pair your motorised blinds with solar-powered charging accessories to further reduce your environmental footprint. Smart scheduling ensures your home is always at its most efficient, whether you are home or away.</p>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Expert In-Home Consultations -->
-  <section id="contact" class="py-12 px-4">
-    <div class="max-w-site mx-auto">
-      <img src="https://placehold.co/980x260/e8e0d8/aaaaaa?text=Expert+In-Home+Consultations" alt="Expert Consultations" class="w-full h-64 object-cover rounded-xl mb-8">
-      <div class="text-center max-w-2xl mx-auto">
-        <h2 class="text-2xl font-semibold text-dark mb-4">Expert In-Home Consultations</h2>
-        <p class="text-sm font-light text-gray-600 leading-relaxed mb-6">Our in-home consultation service takes the hassle out of buying new blinds. We'll bring a range of fabric samples to you so you can see how they look against your existing décor. Our expert advisors will provide bespoke advice and guidance, ensuring you make an informed decision you'll be happy with. Choose our service for a stress-free way to find the perfect window covering.</p>
-        <a href="contact.html" class="bg-accent text-white text-xs font-semibold px-6 py-3 rounded-full hover:bg-accent-dark transition-colors">Get a Free Quote</a>
       </div>
     </div>
   </section>
@@ -289,7 +272,7 @@
   <footer class="bg-white border-t border-gray-100 py-12 px-4">
     <div class="max-w-site mx-auto grid grid-cols-1 md:grid-cols-4 gap-6 gap-y-8">
       <div>
-        <div class="flex items-center mb-4"><div style="width:200px;height:52px;overflow:hidden;"><img src="images/starlight logo website updated.png" alt="Starlight Shades" style="height:140px;width:auto;max-width:none;margin-top:-38px;margin-left:-54px;"></div></div>
+        <div class="flex items-center mb-4 footer-logo"><div style="display:flex;align-items:center;"><div style="width:150px;height:44px;overflow:hidden;flex-shrink:0;"><img src="images/starlight logo website updated.png" alt="Starlight Shades" style="height:120px;width:auto;max-width:none;margin-top:-40px;margin-left:-54px;"></div><span style="font-family:Manrope,sans-serif;font-size:25px;font-weight:800;color:#000000;margin-left:-4px;-webkit-text-stroke:0.85px #000000;line-height:1;margin-top:-6px;">Shades</span></div></div>
       </div>
       <div>
         <h4 class="font-semibold text-xs text-dark mb-3">Contact</h4>
@@ -301,7 +284,6 @@
       <div>
         <h4 class="font-semibold text-xs text-dark mb-3">Information</h4>
         <ul class="space-y-2">
-          <li><a href="#" class="text-xs font-light text-gray-500 hover:text-accent-dark">Lifetime Guarantee</a></li>
           <li><a href="child-safety.html" class="text-xs font-light text-gray-500 hover:text-accent-dark">Child Safety</a></li>
         </ul>
       </div>
@@ -313,24 +295,6 @@
       </div>
     </div>
   </footer>
-
-<script>
-  document.querySelectorAll('.nav-dropdown').forEach(function(dropdown) {
-    var menu = dropdown.querySelector('.dropdown-menu');
-    var timeout;
-    dropdown.addEventListener('mouseenter', function() {
-      clearTimeout(timeout);
-      menu.style.display = 'block';
-    });
-    dropdown.addEventListener('mouseleave', function() {
-      timeout = setTimeout(function() { menu.style.display = 'none'; }, 150);
-    });
-    menu.addEventListener('mouseenter', function() { clearTimeout(timeout); });
-    menu.addEventListener('mouseleave', function() {
-      timeout = setTimeout(function() { menu.style.display = 'none'; }, 150);
-    });
-  });
-</script>
 
 <script>
   function toggleMobileMenu() {

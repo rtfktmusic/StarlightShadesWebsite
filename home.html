@@ -5,8 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Starlight Shades – Window Furnishing Experts</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>.nav-logo{transform:translateX(-21px);}.footer-logo{transform:translateX(-27px);}@media(min-width:1024px){.nav-logo{transform:translateX(-40px);}.footer-logo{transform:translateX(-40px);}}</style>
   <script>
     tailwind.config = {
       theme: {
@@ -39,7 +40,7 @@
   <style>
     html { scroll-behavior: smooth; }
     body { font-family: 'Poppins', sans-serif; color: #3B3D40; }
-    .dropdown-menu { display: none; position: absolute; }
+    .dropdown-menu { display: none; position: absolute; } .nav-dropdown:hover .dropdown-menu { display: block; }
     .marquee-track { display: flex; align-items: center; gap: 80px; width: max-content; will-change: transform; }
     .marquee-item { flex-shrink: 0; }
 
@@ -133,15 +134,15 @@
   <nav class="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
     <div class="max-w-site mx-auto px-4 flex items-center justify-between h-16">
       <!-- Logo -->
-      <a href="home.html" style="display:block;width:150px;height:44px;overflow:hidden;flex-shrink:0;"><img src="images/starlight logo website updated.png" alt="Starlight" style="height:120px;width:auto;max-width:none;margin-top:-40px;margin-left:-54px;"></a>
+      <a href="home.html" class="nav-logo" style="display:flex;align-items:center;flex-shrink:0;text-decoration:none;margin-right:12px;margin-left:0px;"><div style="width:150px;height:44px;overflow:hidden;flex-shrink:0;"><img src="images/starlight logo website updated.png" alt="Starlight" style="height:120px;width:auto;max-width:none;margin-top:-40px;margin-left:-62px;"></div><span style="font-family:Manrope,sans-serif;font-size:25px;font-weight:800;color:#000000;margin-left:-14px;-webkit-text-stroke:0.85px #000000;line-height:1;margin-top:-6px;">Shades</span></a>
       <!-- Nav Links -->
       <div class="hidden lg:flex items-center gap-5 text-sm font-normal text-dark">
         <a href="home.html" class="hover:text-accent-dark transition-colors">Home</a>
-        <div class="relative nav-dropdown"><button class="hover:text-accent-dark transition-colors flex items-center gap-1">About <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></button><div class="dropdown-menu absolute top-full left-0 bg-white shadow-lg rounded mt-1 py-1 w-40 z-50"><a href="about.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">About Us</a><a href="contact.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Contact Us</a></div></div>
+        <div class="relative nav-dropdown"><button class="hover:text-accent-dark transition-colors flex items-center gap-1">About <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></button><div class="dropdown-menu absolute top-full left-0 bg-white shadow-lg rounded py-1 w-40 z-50"><a href="about.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">About Us</a><a href="contact.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Contact Us</a></div></div>
         <!-- Indoor Blinds dropdown -->
         <div class="relative nav-dropdown">
           <button class="hover:text-accent-dark transition-colors flex items-center gap-1 whitespace-nowrap">Indoor Blinds <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></button>
-          <div class="dropdown-menu absolute top-full left-0 bg-white shadow-lg rounded mt-1 py-1 w-40 z-50">
+          <div class="dropdown-menu absolute top-full left-0 bg-white shadow-lg rounded py-1 w-40 z-50">
             <a href="roller-blinds.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Roller Blinds</a>
             <a href="vertical-blinds.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Vertical Blinds</a>
             <a href="indoor-blinds-gallery.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Gallery</a>
@@ -149,7 +150,7 @@
         </div>
         <div class="relative nav-dropdown">
           <button class="hover:text-accent-dark transition-colors flex items-center gap-1">Curtains <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></button>
-          <div class="dropdown-menu absolute top-full left-0 bg-white shadow-lg rounded mt-1 py-1 w-40 z-50">
+          <div class="dropdown-menu absolute top-full left-0 bg-white shadow-lg rounded py-1 w-40 z-50">
             <a href="curtains.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Curtains</a>
             <a href="curtains-gallery.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Gallery</a>
           </div>
@@ -157,14 +158,14 @@
         <!-- Shutters dropdown -->
         <div class="relative nav-dropdown">
           <button class="hover:text-accent-dark transition-colors flex items-center gap-1">Shutters <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></button>
-          <div class="dropdown-menu absolute top-full left-0 bg-white shadow-lg rounded mt-1 py-1 w-44 z-50">
+          <div class="dropdown-menu absolute top-full left-0 bg-white shadow-lg rounded py-1 w-44 z-50">
             <a href="plantation-shutters.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Plantation Shutters</a>
             <a href="shutters-gallery.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Gallery</a>
           </div>
         </div>
         <div class="relative nav-dropdown">
           <button class="hover:text-accent-dark transition-colors flex items-center gap-1 whitespace-nowrap">Outdoor Blinds <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></button>
-          <div class="dropdown-menu top-full left-0 bg-white shadow-lg rounded mt-1 py-1 w-36 z-50">
+          <div class="dropdown-menu absolute top-full left-0 bg-white shadow-lg rounded py-2 w-36 z-50">
             <a href="awnings.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Awnings</a>
             <a href="outdoor-blinds-gallery.html" class="block px-4 py-2 text-xs hover:bg-orange-50 hover:text-accent-dark">Gallery</a>
           </div>
@@ -306,7 +307,7 @@
           </a>
           <div style="width:3px;background:rgba(255,255,255,.15);flex-shrink:0;"></div>
           <a href="vertical-blinds.html" style="flex:1;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding:20px;text-decoration:none;">
-            <img src="https://images.unsplash.com/photo-1609342066876-dce9c0782fb7?w=1200&q=85" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+            <img src=".claude/Starlightphotos/Vertical%20blind/Vertical%20fabric.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
             <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.75) 0%,transparent 60%);"></div>
             <div style="position:relative;">
               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="white" stroke-width="1.5" viewBox="0 0 24 24" style="margin-bottom:8px;"><line x1="5" y1="3" x2="5" y2="21"/><line x1="10" y1="3" x2="10" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/><line x1="20" y1="3" x2="20" y2="21"/></svg>
@@ -445,7 +446,7 @@
     <div class="max-w-site mx-auto text-center mb-10">
       <h2 class="text-white font-semibold text-2xl">Why Choose Starlight Shades?</h2>
     </div>
-    <div class="max-w-site mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
+    <div class="max-w-site mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
       <div class="text-center">
         <h3 class="text-accent font-semibold text-sm mb-2">Custom-Made Solutions</h3>
         <p class="text-gray-400 text-xs font-light leading-relaxed">Every product is made to measure for your exact windows — no compromises on fit or quality.</p>
@@ -457,10 +458,6 @@
       <div class="text-center">
         <h3 class="text-accent font-semibold text-sm mb-2">Professional Installation</h3>
         <p class="text-gray-400 text-xs font-light leading-relaxed">Sit back while our expert installers handle everything with care and precision.</p>
-      </div>
-      <div class="text-center">
-        <h3 class="text-accent font-semibold text-sm mb-2">Large Service Area</h3>
-        <p class="text-gray-400 text-xs font-light leading-relaxed">We service Melbourne, Sydney, Geelong and surrounds — bringing great window furnishings to more homes.</p>
       </div>
     </div>
   </section>
@@ -505,12 +502,64 @@
     <a href="tel:1300000000" class="bg-white text-accent-dark font-semibold text-sm px-8 py-3 rounded-full hover:bg-gray-50 transition-colors inline-block">Call Us Now</a>
   </section>
 
-  <!-- Gallery Row -->
-  <section class="max-w-site mx-auto px-4 py-12 relative z-10">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-      <img src="https://placehold.co/400x300/d4c8bc/888888?text=Installed+Blinds" alt="Gallery 1" class="w-full h-48 object-cover rounded-lg">
-      <img src="https://placehold.co/400x300/ccc0b4/888888?text=Living+Room" alt="Gallery 2" class="w-full h-48 object-cover rounded-lg">
-      <img src="https://placehold.co/400x300/d8cec4/888888?text=Bedroom+Shades" alt="Gallery 3" class="w-full h-48 object-cover rounded-lg">
+  <!-- FAQ Section -->
+  <section class="max-w-site mx-auto px-4 py-16 relative z-10">
+    <div class="text-center mb-10">
+      <span class="inline-block text-xs font-light text-gray-500 border border-gray-300 rounded-full px-4 py-1 mb-4">FAQs</span>
+      <h2 class="text-3xl md:text-4xl font-bold text-dark mb-3" style="font-family:'Manrope',sans-serif;">Frequently asked questions</h2>
+      <p class="text-sm font-light text-gray-500">Find helpful answers about our services, detailed process, and bringing your vision to life.</p>
+    </div>
+    <div class="divide-y divide-gray-200">
+      <!-- FAQ 1 -->
+      <div>
+        <button onclick="const a=this.nextElementSibling;a.classList.toggle('hidden');this.querySelector('svg').classList.toggle('rotate-180')" class="w-full flex items-center justify-between py-5 text-left">
+          <span class="text-sm font-semibold text-dark">Do you provide free quotes?</span>
+          <svg class="w-5 h-5 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="hidden pb-5">
+          <p class="text-sm font-light text-gray-500">Yes, we offer a free measure and quote service. We'll visit your home, take precise measurements, and provide expert advice on the best solution for your space.</p>
+        </div>
+      </div>
+      <!-- FAQ 2 -->
+      <div>
+        <button onclick="const a=this.nextElementSibling;a.classList.toggle('hidden');this.querySelector('svg').classList.toggle('rotate-180')" class="w-full flex items-center justify-between py-5 text-left">
+          <span class="text-sm font-semibold text-dark">How long does installation take?</span>
+          <svg class="w-5 h-5 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="hidden pb-5">
+          <p class="text-sm font-light text-gray-500">Most installations are completed within a few hours, depending on the size of the job and the type of product.</p>
+        </div>
+      </div>
+      <!-- FAQ 3 -->
+      <div>
+        <button onclick="const a=this.nextElementSibling;a.classList.toggle('hidden');this.querySelector('svg').classList.toggle('rotate-180')" class="w-full flex items-center justify-between py-5 text-left">
+          <span class="text-sm font-semibold text-dark">What areas do you service?</span>
+          <svg class="w-5 h-5 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="hidden pb-5">
+          <p class="text-sm font-light text-gray-500">We proudly service Sydney and surrounding regions. Contact us to check if we cover your area.</p>
+        </div>
+      </div>
+      <!-- FAQ 4 -->
+      <div>
+        <button onclick="const a=this.nextElementSibling;a.classList.toggle('hidden');this.querySelector('svg').classList.toggle('rotate-180')" class="w-full flex items-center justify-between py-5 text-left">
+          <span class="text-sm font-semibold text-dark">Do you offer warranty on your products?</span>
+          <svg class="w-5 h-5 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="hidden pb-5">
+          <p class="text-sm font-light text-gray-500">Yes, all our products come with a manufacturer's warranty, and our installations are backed by a workmanship guarantee for your peace of mind.</p>
+        </div>
+      </div>
+      <!-- FAQ 5 -->
+      <div>
+        <button onclick="const a=this.nextElementSibling;a.classList.toggle('hidden');this.querySelector('svg').classList.toggle('rotate-180')" class="w-full flex items-center justify-between py-5 text-left">
+          <span class="text-sm font-semibold text-dark">Can you motorise my blinds or curtains?</span>
+          <svg class="w-5 h-5 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="hidden pb-5">
+          <p class="text-sm font-light text-gray-500">Yes, we offer motorised options for blinds, curtains, and awnings, giving you the convenience of remote or smart-home control.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -519,7 +568,7 @@
     <div class="max-w-site mx-auto grid grid-cols-1 md:grid-cols-4 gap-6 gap-y-8">
       <!-- Logo -->
       <div>
-        <div class="flex items-center mb-4"><div style="width:200px;height:52px;overflow:hidden;"><img src="images/starlight logo website updated.png" alt="Starlight Shades" style="height:140px;width:auto;max-width:none;margin-top:-38px;margin-left:-54px;"></div></div>
+        <div class="flex items-center mb-4 footer-logo"><div style="display:flex;align-items:center;"><div style="width:150px;height:44px;overflow:hidden;flex-shrink:0;"><img src="images/starlight logo website updated.png" alt="Starlight Shades" style="height:120px;width:auto;max-width:none;margin-top:-40px;margin-left:-54px;"></div><span style="font-family:Manrope,sans-serif;font-size:25px;font-weight:800;color:#000000;margin-left:-4px;-webkit-text-stroke:0.85px #000000;line-height:1;margin-top:-6px;">Shades</span></div></div>
       </div>
       <!-- Contact -->
       <div>
@@ -533,7 +582,6 @@
       <div>
         <h4 class="font-semibold text-xs text-dark mb-3">Information</h4>
         <ul class="space-y-2">
-          <li><a href="#" class="text-xs font-light text-gray-500 hover:text-accent-dark">Lifetime Guarantee</a></li>
           <li><a href="child-safety.html" class="text-xs font-light text-gray-500 hover:text-accent-dark">Child Safety</a></li>
         </ul>
       </div>
@@ -549,22 +597,6 @@
   </div><!-- /Aurora Bottom Section -->
 
 <script>
-  document.querySelectorAll('.nav-dropdown').forEach(function(dropdown) {
-    var menu = dropdown.querySelector('.dropdown-menu');
-    var timeout;
-    dropdown.addEventListener('mouseenter', function() {
-      clearTimeout(timeout);
-      menu.style.display = 'block';
-    });
-    dropdown.addEventListener('mouseleave', function() {
-      timeout = setTimeout(function() { menu.style.display = 'none'; }, 150);
-    });
-    menu.addEventListener('mouseenter', function() { clearTimeout(timeout); });
-    menu.addEventListener('mouseleave', function() {
-      timeout = setTimeout(function() { menu.style.display = 'none'; }, 150);
-    });
-  });
-
   // Seamless infinite marquee
   (function() {
     var track = document.getElementById('supplier-track');
@@ -603,7 +635,6 @@
     tick();
   })();
 </script>
-
 <script>
   function toggleMobileMenu() {
     var menu = document.getElementById('mobile-menu');
